@@ -6,7 +6,7 @@
 /*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 13:40:11 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/03 13:40:37 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/03 13:56:56 by bperez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class ConfigParser {
 public:
 	ConfigParser(const std::string& configFile);
-	std::vector<ServerConfig> parse();
+	ServerConfig parse();
 
 private:
 	std::string configFile;
