@@ -6,7 +6,7 @@
 /*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 13:38:57 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/03 13:38:58 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/03 14:00:52 by bperez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,29 @@ struct LocationConfig {
 
 struct CGIConfig {
     std::string root;
-    std::vector<std::string> cgiPath;
-    std::vector<std::string> cgiExt;
+    std::string path;
+    std::string ext;
 };
 
 class ServerConfig {
 public:
+    ServerConfig();
+    ServerConfig(const ServerConfig& other);
+    ServerConfig& operator=(const ServerConfig& other);
+    ~ServerConfig();
+
+    // Getters
+    int getListen() const { return listen; }
+    const std::string& getHost() const { return host; }
+    const std::string& getServerName() const { return serverName; }
+    const std::map<int, std::string>& getErrorPages() const { return errorPages; }
+    size_t getClientMaxBodySize() const { return clientMaxBodySize; }
+    const std::string& getRoot() const { return root; }
+    const std::string& getIndex() const { return index; }
+    const std::vector<LocationConfig>& getLocations() const { return locations; }
+    const CGIConfig& getCgi() const { return cgi; }
+
+private:
     int listen;
     std::string host;
     std::string serverName;
@@ -44,9 +61,6 @@ public:
     std::string index;
     std::vector<LocationConfig> locations;
     CGIConfig cgi;
-
-    // Constructor with default values
-    ServerConfig() : listen(80), host("127.0.0.1"), clientMaxBodySize(1024 * 1024), index("index.html") {}
 };
 
 #endif 
