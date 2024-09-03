@@ -42,3 +42,42 @@ Configuration file is a text file that contains various settings and directives 
 
 Here is an example fie that shows config file format and supported directives.
 <br>
+
+  ```nginx
+server {
+    listen 8001;                        # listening port, mandatory parameter
+    host 127.0.0.1;                     # host or 127.0.0.1 by default
+    server_name test;                   # specify server_name, need to be added into /etc/hosts to work
+    error_page 404 /error/404.html;     # default error page
+    client_max_body_size 1024;          # max request body size in bytes
+    root docs/fusion_web/;              # root folder of site directory, full or relative path, mandatory parameter
+    index index.html;                   # default page when requesting a directory, index.html by default
+
+    location /tours {                   
+        root docs/fusion_web;           # root folder of the location, if not specified, taken from the server. 
+                                        # EX: - URI /tours           --> docs/fusion_web/tours
+                                        #     - URI /tours/page.html --> docs/fusion_web/tours/page.html 
+        autoindex on;                   # turn on/off directory listing
+        allow_methods POST GET;         # allowed methods in location, GET only by default
+        index index.html;               # default page when requesting a directory, copies root index by default
+        return abc/index1.html;         # redirection
+        alias  docs/fusion_web;         # replaces location part of URI. 
+                                        # EX: - URI /tours           --> docs/fusion_web
+                                        #     - URI /tours/page.html --> docs/fusion_web/page.html 
+    }
+
+    location cgi-bin {
+        root ./;                                                 # cgi-bin location, mandatory parameter
+        cgi_path /usr/bin/python3 /bin/bash;                     # location of interpreters installed on the current system, mandatory parameter
+        cgi_ext .py .sh;                                         # extensions for executable files, mandatory parameter
+    }
+}
+  ```
+
+
+
+## CGI
+
+CGI is a standard for running external programs from a web server. When a user requests a web page that should be handled by a CGI program, the web server executes the program and returns the output to the user's web browser.
+
+CGI programs are simply scripts that can be written in any programming language, such as Perl, Python, or bash, and are typically used to process data submitted by a user through a web browser, or to generate dynamic content on a web page.
