@@ -6,7 +6,7 @@
 /*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 13:38:57 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/03 14:00:52 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:00:19 by bperez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,22 +35,35 @@ struct CGIConfig {
 
 class ServerConfig {
 public:
+	// Orthodox Canonical Form
     ServerConfig();
     ServerConfig(const ServerConfig& other);
     ServerConfig& operator=(const ServerConfig& other);
     ~ServerConfig();
 
     // Getters
-    int getListen() const { return listen; }
-    const std::string& getHost() const { return host; }
-    const std::string& getServerName() const { return serverName; }
-    const std::map<int, std::string>& getErrorPages() const { return errorPages; }
-    size_t getClientMaxBodySize() const { return clientMaxBodySize; }
-    const std::string& getRoot() const { return root; }
-    const std::string& getIndex() const { return index; }
-    const std::vector<LocationConfig>& getLocations() const { return locations; }
-    const CGIConfig& getCgi() const { return cgi; }
+    int getListen() const;
+    const std::string& getHost() const;
+    const std::string& getServerName() const;
+    const std::map<int, std::string>& getErrorPages() const;
+    size_t getClientMaxBodySize() const;
+    const std::string& getRoot() const;
+    const std::string& getIndex() const;
+    std::vector<LocationConfig>& getLocations();
+    const std::vector<LocationConfig>& getLocations() const;
+    const CGIConfig& getCgi() const;
 
+    // Setters
+    void setListen(int value);
+    void setHost(const std::string& value);
+    void setServerName(const std::string& value);
+    void setErrorPages(const std::map<int, std::string>& value);
+    void setClientMaxBodySize(size_t value);
+    void setRoot(const std::string& value);
+    void setIndex(const std::string& value);
+    void setLocations(const std::vector<LocationConfig>& value);
+    void setCgi(const CGIConfig& value);
+	
 private:
     int listen;
     std::string host;

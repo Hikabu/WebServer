@@ -6,21 +6,15 @@
 /*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 14:00:00 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/03 14:00:21 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/03 15:00:49 by bperez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ServerConfig.hpp"
 
 // Default constructor
-ServerConfig::ServerConfig()
-    : listen(80), host("127.0.0.1"), clientMaxBodySize(1024 * 1024), index("index.html") {
-}
+ServerConfig::ServerConfig() { }
 
-// Constructor with parameters
-ServerConfig::ServerConfig(int listen, std::string host, std::string serverName, size_t clientMaxBodySize, std::string root, std::string index, std::vector<LocationConfig> locations, CGIConfig cgi)
-    : listen(listen), host(host), serverName(serverName), clientMaxBodySize(clientMaxBodySize), root(root), index(index), locations(locations), cgi(cgi) {
-}
 
 // Copy constructor
 ServerConfig::ServerConfig(const ServerConfig& other)
@@ -54,3 +48,26 @@ ServerConfig& ServerConfig::operator=(const ServerConfig& other) {
 // Destructor
 ServerConfig::~ServerConfig() {
 }
+
+// Getters
+int ServerConfig::getListen() const { return listen; }
+const std::string& ServerConfig::getHost() const { return host; }
+const std::string& ServerConfig::getServerName() const { return serverName; }
+const std::map<int, std::string>& ServerConfig::getErrorPages() const { return errorPages; }
+size_t ServerConfig::getClientMaxBodySize() const { return clientMaxBodySize; }
+const std::string& ServerConfig::getRoot() const { return root; }
+const std::string& ServerConfig::getIndex() const { return index; }
+std::vector<LocationConfig>& ServerConfig::getLocations() { return locations; }
+const std::vector<LocationConfig>& ServerConfig::getLocations() const { return locations; }
+const CGIConfig& ServerConfig::getCgi() const { return cgi; }
+
+// Setters
+void ServerConfig::setListen(int value) { listen = value; }
+void ServerConfig::setHost(const std::string& value) { host = value; }
+void ServerConfig::setServerName(const std::string& value) { serverName = value; }
+void ServerConfig::setErrorPages(const std::map<int, std::string>& value) { errorPages = value; }
+void ServerConfig::setClientMaxBodySize(size_t value) { clientMaxBodySize = value; }
+void ServerConfig::setRoot(const std::string& value) { root = value; }
+void ServerConfig::setIndex(const std::string& value) { index = value; }
+void ServerConfig::setLocations(const std::vector<LocationConfig>& value) { locations = value; }
+void ServerConfig::setCgi(const CGIConfig& value) { cgi = value; }
