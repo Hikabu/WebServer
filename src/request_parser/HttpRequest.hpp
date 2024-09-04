@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ConfigParser.hpp                                   :+:      :+:    :+:   */
+/*   HttpRequest.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bperez-a <bperez-a@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/03 13:40:11 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/04 20:08:18 by bperez-a         ###   ########.fr       */
+/*   Created: 2024/09/04 20:11:38 by bperez-a          #+#    #+#             */
+/*   Updated: 2024/09/04 20:21:32 by bperez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONFIG_PARSER_HPP
-#define CONFIG_PARSER_HPP
+#ifndef HTTPREQUEST_HPP
+#define HTTPREQUEST_HPP
 
 #include "includes.hpp"
-#include "ServerConfig.hpp"
 
-
-class ConfigParser {
+class HttpRequest {
 public:
-	ConfigParser(const std::string& configFile);
-	ServerConfig parse();
+    HttpRequest();
+    HttpRequest(const HttpRequest& other);
+    HttpRequest& operator=(const HttpRequest& other);
+    ~HttpRequest();
 
+    std::string getMethod() const;
+    std::string getPath() const;
+    std::string getProtocol() const;
 
+    void parse(const std::string& request);
 
 private:
-	std::string configFile;
+    std::string method;
+    std::string path;
+    std::string protocol;
 };
 
 #endif

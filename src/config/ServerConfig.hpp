@@ -3,19 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ServerConfig.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bperez-a <bperez-a@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 13:38:57 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/03 15:00:19 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/04 20:08:26 by bperez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERVER_CONFIG_HPP
 #define SERVER_CONFIG_HPP
 
-#include <string>
-#include <vector>
-#include <map>
+#include "includes.hpp"
 
 struct LocationConfig {
     std::string path;
@@ -63,7 +61,7 @@ public:
     void setIndex(const std::string& value);
     void setLocations(const std::vector<LocationConfig>& value);
     void setCgi(const CGIConfig& value);
-	
+
 private:
     int listen;
     std::string host;
@@ -76,4 +74,4 @@ private:
     CGIConfig cgi;
 };
 
-#endif 
+#endif

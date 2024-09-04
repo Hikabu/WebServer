@@ -10,7 +10,8 @@ INC_DIR = src
 # Source files
 SRCS = $(SRC_DIR)/main.cpp \
        $(SRC_DIR)/config/ConfigParser.cpp \
-       $(SRC_DIR)/config/ServerConfig.cpp
+       $(SRC_DIR)/config/ServerConfig.cpp \
+	   $(SRC_DIR)/request_parser/HttpRequest.cpp
 
 # Object files
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)

@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bperez-a <bperez-a@student.42bangkok.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/04 20:09:33 by bperez-a          #+#    #+#             */
+/*   Updated: 2024/09/04 20:09:34 by bperez-a         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "config/ConfigParser.hpp"
 #include "config/ServerConfig.hpp"
-#include <iostream>
-#include <stdexcept>
+#include "includes.hpp"
 
 void printServerConfig(const ServerConfig& config) {
     std::cout << "Server Configuration:" << std::endl;

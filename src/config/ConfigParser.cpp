@@ -1,8 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ConfigParser.cpp                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bperez-a <bperez-a@student.42bangkok.co    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/04 20:06:17 by bperez-a          #+#    #+#             */
+/*   Updated: 2024/09/04 20:19:33 by bperez-a         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ConfigParser.hpp"
-#include <fstream>
-#include <sstream>
-#include <stdexcept>
-#include <iostream> // Add this for debug output
+
 
 ConfigParser::ConfigParser(const std::string& configFile) : configFile(configFile) {}
 
@@ -12,7 +21,7 @@ ServerConfig ConfigParser::parse() {
     if (!file.is_open()) {
         throw std::runtime_error("Unable to open config file: " + configFile);
     }
-    
+
     std::string line;
     bool inServer = false;
     bool inLocation = false;
@@ -23,34 +32,28 @@ ServerConfig ConfigParser::parse() {
         std::istringstream iss(line);
         std::string key;
         std::string value;
-        
+
         if (iss >> key) {
-            std::cout << "Parsing key: " << key << std::endl; // Debug output
             if (key == "server" && iss >> value && value == "{") {
                 inServer = true;
                 braceCount++;
-                std::cout << "Entering server block" << std::endl; // Debug output
             } else if (key == "location" && inServer) {
                 if (inLocation) {
                     server.getLocations().push_back(currentLocation);
-                    std::cout << "Adding location: " << currentLocation.path << std::endl; // Debug output
                 }
                 inLocation = true;
                 currentLocation = LocationConfig();
                 iss >> currentLocation.path >> value; // Read path and opening brace
                 braceCount++;
-                std::cout << "Starting new location: " << currentLocation.path << std::endl; // Debug output
             } else if (key == "{") {
                 braceCount++;
             } else if (key == "}") {
                 braceCount--;
                 if (braceCount == 1 && inLocation) {
                     server.getLocations().push_back(currentLocation);
-                    std::cout << "Adding location: " << currentLocation.path << std::endl; // Debug output
                     inLocation = false;
                 } else if (braceCount == 0) {
                     inServer = false;
-                    std::cout << "Exiting server block" << std::endl; // Debug output
                 }
             } else if (inServer) {
                 if (inLocation) {
@@ -111,8 +114,5 @@ ServerConfig ConfigParser::parse() {
             }
         }
     }
-
-    std::cout << "Total locations parsed: " << server.getLocations().size() << std::endl; // Debug output
-
     return server;
 }
