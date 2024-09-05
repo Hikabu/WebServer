@@ -1,0 +1,477 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Thu Sep  5 16:31:13 2024
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+SSH_AGENT_LAUNCHER = gnome-keyring
+# makefile (from 'Makefile', line 6)
+SRC_DIR = src
+# environment
+LC_NAME = en_US.UTF-8
+# environment
+LC_NUMERIC = en_US.UTF-8
+# environment
+VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
+# environment
+VSCODE_CWD = /home/artclave/Desktop/webserver
+# environment
+LC_ADDRESS = en_US.UTF-8
+# environment
+LIBVIRT_DEFAULT_URI = qemu:///system
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# makefile (from 'Makefile', line 7)
+OBJ_DIR = obj
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/artclave/Desktop/webserver
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/home/artclave/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+OLDPWD = /home/artclave/Desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/artclave/.config/Code/CachedData/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# environment
+LANG = C
+# environment
+XAUTHORITY = /home/artclave/.Xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# environment
+GNOME_TERMINAL_SERVICE = :1.100
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/artclave/Desktop/webserver
+# makefile (from 'Makefile', line 8)
+INC_DIR = src
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# makefile (from 'Makefile', line 11)
+SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/config/ConfigParser.cpp $(SRC_DIR)/config/ServerConfig.cpp $(SRC_DIR)/request_parser/HttpRequest.cpp $(SRC_DIR)/response_builder/ResponseBuilder.cpp $(SRC_DIR)/server/Server.cpp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /run/user/103610/keyring/ssh
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 544689
+# environment
+KRB5CCNAME = FILE:/tmp/krb5cc_103610_Q96p6W
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+SESSION_MANAGER = local/z1t3c2.42bangkok.com:@/tmp/.ICE-unix/539589,unix/z1t3c2.42bangkok.com:/tmp/.ICE-unix/539589
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/103610/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en","availableLanguages":{}}
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 19)
+OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# makefile
+SHELL = /bin/sh
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=ibus
+# environment
+SHLVL = 1
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/126b5eea_ff8b_4877_af6d_5665b727d655
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /home/artclave/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# default
+MAKEFILES := 
+# environment
+LANGUAGE = en_US:
+# environment
+LC_MONETARY = en_US.UTF-8
+# automatic
+^F = $(notdir $^)
+# environment
+LC_TIME = en_US.UTF-8
+# environment
+DOCKER_HOST = unix:///run/user/103610/docker.sock
+# environment
+LC_TELEPHONE = en_US.UTF-8
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 22)
+NAME = webserv
+# environment
+GTK_IM_MODULE = ibus
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = ubuntu
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+LOGNAME = artclave
+# makefile
+.DEFAULT_GOAL := all
+# environment
+SYSTEMD_EXEC_PID = 539616
+# environment
+DISPLAY = :0
+# environment
+USER = artclave
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# environment
+DEBUGINFOD_URLS = https://debuginfod.ubuntu.com 
+# environment
+LC_MEASUREMENT = en_US.UTF-8
+# environment
+_ = /usr/bin/code
+# environment
+LC_PAPER = en_US.UTF-8
+# environment
+XDG_RUNTIME_DIR = /run/user/103610
+# environment
+GPG_AGENT_INFO = /run/user/103610/gnupg/S.gpg-agent:0:1
+# environment
+COLORTERM = truecolor
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/artclave
+# environment
+QT_IM_MODULE = ibus
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/103610/vscode-e449c818-1.92-main.sock
+# environment
+TERM = xterm-256color
+# environment
+FT_HOOK_PATHNAME = login-user.d
+# environment
+IM_CONFIG_PHASE = 1
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+VSCODE_CLI = 1
+# environment
+FT_HOOK_NAME = login-user
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VTE_VERSION = 6800
+# makefile (from 'Makefile', line 3)
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/artclave
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# makefile (from 'Makefile', line 2)
+CXX = c++
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+GDMSESSION = ubuntu
+# environment
+LC_IDENTIFICATION = en_US.UTF-8
+# variable set hash-table stats:
+# Load=117/1024=11%, Rehash=0, Collisions=13/166=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# src/config (device 2064, inode 27171587): 5 files, no impossibilities so far.
+# src/server (device 2064, inode 4197154): 3 files, no impossibilities so far.
+# src/request_parser (device 2064, inode 29376004): 3 files, no impossibilities so far.
+# src (device 2064, inode 21041883): 6 files, no impossibilities so far.
+# . (device 2064, inode 16801887): 13 files, no impossibilities.
+# src/response_builder (device 2064, inode 87296): 3 files, no impossibilities so far.
+
+# 33 files, no impossibilities in 6 directories.
+
+# Implicit Rules
+
+obj/%.o: src/%.cpp
+#  recipe to execute (from 'Makefile', line 31):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+# 1 implicit rules, 0 (0.0%) terminal.
+# Files
+
+# Not a target:
+src/config/ServerConfig.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+ 
+#  Successfully updated.
+
+obj/main.o: src/main.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 31):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+# Not a target:
+src/response_builder/ResponseBuilder.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 35):
+	rm -rf $(OBJ_DIR)
+
+# Not a target:
+src/request_parser/HttpRequest.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+
+webserv: obj/main.o obj/config/ConfigParser.o obj/config/ServerConfig.o obj/request_parser/HttpRequest.o obj/response_builder/ResponseBuilder.o obj/server/Server.o
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := webserv
+# automatic
+# * := 
+# automatic
+# < := obj/main.o
+# automatic
+# + := obj/main.o obj/config/ConfigParser.o obj/config/ServerConfig.o obj/request_parser/HttpRequest.o obj/response_builder/ResponseBuilder.o obj/server/Server.o
+# automatic
+# % := 
+# automatic
+# ^ := obj/main.o obj/config/ConfigParser.o obj/config/ServerConfig.o obj/request_parser/HttpRequest.o obj/response_builder/ResponseBuilder.o obj/server/Server.o
+# automatic
+# ? := obj/main.o obj/config/ConfigParser.o obj/config/ServerConfig.o obj/request_parser/HttpRequest.o obj/response_builder/ResponseBuilder.o obj/server/Server.o
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/15=7%
+#  recipe to execute (from 'Makefile', line 28):
+	$(CXX) $(CXXFLAGS) $^ -o $@
+
+re: fclean all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: webserv
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+
+obj/server/Server.o: src/server/Server.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'server/Server'
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 31):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+fclean: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 38):
+	rm -f $(NAME)
+
+# Not a target:
+src/server/Server.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+
+obj/config/ServerConfig.o: src/config/ServerConfig.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'config/ServerConfig'
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 31):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+obj/config/ConfigParser.o: src/config/ConfigParser.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'config/ConfigParser'
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 31):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+obj/request_parser/HttpRequest.o: src/request_parser/HttpRequest.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'request_parser/HttpRequest'
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 31):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+# Not a target:
+src/config/ConfigParser.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+
+obj/response_builder/ResponseBuilder.o: src/response_builder/ResponseBuilder.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'response_builder/ResponseBuilder'
+#  Last modified 2024-09-05 16:31:07.477524532
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 31):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+.PHONY: all clean fclean re
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=21/1024=2%, Rehash=0, Collisions=3/66=5%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 56 / storage = 827 B / avg = 14 B
+# current buf: size = 8162 B / used = 827 B / count = 56 / avg = 14 B
+
+# strcache performance: lookups = 94 / hit rate = 40%
+# hash-table stats:
+# Load=56/8192=1%, Rehash=0, Collisions=5/94=5%
+# Finished Make data base on Thu Sep  5 16:31:13 2024
+
+ 
