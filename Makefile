@@ -11,13 +11,15 @@ INC_DIR = src
 SRCS = $(SRC_DIR)/main.cpp \
        $(SRC_DIR)/config/ConfigParser.cpp \
        $(SRC_DIR)/config/ServerConfig.cpp \
-	   $(SRC_DIR)/request_parser/HttpRequest.cpp
+	   $(SRC_DIR)/request_parser/HttpRequest.cpp \
+	   $(SRC_DIR)/response_builder/ResponseBuilder.cpp \
+	   $(SRC_DIR)/server/Server.cpp
 
 # Object files
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
 # Executable name
-NAME = webserver
+NAME = webserv
 
 # Targets
 all: $(NAME)
