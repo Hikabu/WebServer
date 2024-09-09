@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ResponseBuilder.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 10:15:00 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/09 12:17:21 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/10 01:17:16 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RESPONSE_BUILDER_HPP
 #define RESPONSE_BUILDER_HPP
 
-#include "includes.hpp"
-#include "../request_parser/HttpRequest.hpp"
-#include "../config/ServerConfig.hpp"
+#include "include.hpp"
+#include "HttpRequest.hpp"
+#include "ServerConfig.hpp"
 #include "RequestResponse.hpp"
 
 class ResponseBuilder {

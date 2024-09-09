@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   includes.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:08:02 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/05 16:44:26 by artclave         ###   ########.fr       */
+/*   Updated: 2024/09/09 23:21:55 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INCLUDES_HPP
-#define INCLUDES_HPP
+#ifndef INCLUDE_HPP
+# define INCLUDE_HPP
 
 #include <sys/types.h>    // Provides basic system data types
 #include <sys/socket.h>   // Core socket programming functions

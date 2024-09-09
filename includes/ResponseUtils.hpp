@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ResponseUtils.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:40:51 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/09 14:49:18 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/10 01:17:37 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RESPONSE_UTILS_HPP
 #define RESPONSE_UTILS_HPP
 
-#include "includes.hpp"
+#include "include.hpp"
 #include "RequestResponse.hpp"
-#include "../request_parser/HttpRequest.hpp"
-#include "../config/ServerConfig.hpp"
+#include "HttpRequest.hpp"
+#include "ServerConfig.hpp"
 
 
 enum FileType {
