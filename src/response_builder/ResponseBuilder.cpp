@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ResponseBuilder.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 10:15:30 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/09 14:48:56 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/10 01:16:35 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ResponseBuilder.hpp"
-#include "ResponseUtils.hpp"
+#include "../../includes/ResponseBuilder.hpp"
+#include "../../includes/ResponseUtils.hpp"
 #include <iostream>
 
 RequestResponse ResponseBuilder::build(HttpRequest& request, ServerConfig& config) {

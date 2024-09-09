@@ -1,4 +1,4 @@
-#include "ServerSocket.hpp"
+#include "../../includes/ServerSocket.hpp"
 
 ServerSocket::ServerSocket() : listenSocket(-1), port(0), backlog(32){}
 ServerSocket::~ServerSocket() {}
@@ -9,7 +9,6 @@ int ServerSocket::getListenSocket() const {return listenSocket;}
 
 void  ServerSocket::initListenSocket(std::string ipAddress, int port)
 {
-    std::cout << "Initializing listen socket with IP: " << ipAddress << " and port: " << port << std::endl;
     this->ipAddress = ipAddress;
     this->port = port;
     listenSocket = socket(AF_INET, SOCK_STREAM, 0);
@@ -17,7 +16,6 @@ void  ServerSocket::initListenSocket(std::string ipAddress, int port)
         perror("Error creating socket");
         exit(EXIT_FAILURE);
     }
-    std::cout << "Socket created successfully with fd: " << listenSocket << std::endl;
     memset(&serverAddr, 0, sizeof(serverAddr));
 
     serverAddr.sin_family = AF_INET;
@@ -30,7 +28,6 @@ void  ServerSocket::initListenSocket(std::string ipAddress, int port)
         perror ("Error of ip number");
         exit (EXIT_FAILURE);
     }
-    std::cout << "IP address converted successfully" << std::endl;
      // Set port in network byte order
     serverAddr.sin_port = htons(port);
     int opt = 1;
@@ -40,7 +37,6 @@ void  ServerSocket::initListenSocket(std::string ipAddress, int port)
         close(listenSocket);
         exit(EXIT_FAILURE);
     }
-    std::cout << "Socket option set successfully" << std::endl;
 
     // Bind the socket to the specified IP and port
     if (bind(listenSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) == -1){
@@ -48,7 +44,6 @@ void  ServerSocket::initListenSocket(std::string ipAddress, int port)
         close(listenSocket);
         exit (EXIT_FAILURE);
     }
-    std::cout << "Socket bound successfully" << std::endl;
   // Start listening for incoming connections
     if (listen(listenSocket, backlog) == -1){
         perror ("Error listening on socket");

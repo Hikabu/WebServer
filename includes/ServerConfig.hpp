@@ -6,14 +6,14 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 13:38:57 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/09 11:16:26 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/09 23:26:03 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERVER_CONFIG_HPP
 #define SERVER_CONFIG_HPP
 
-#include "includes.hpp"
+#include "include.hpp"
 
 struct LocationConfig {
     std::string path;
