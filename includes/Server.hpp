@@ -3,25 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   Server.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 16:33:26 by artclave          #+#    #+#             */
-/*   Updated: 2024/09/09 13:53:08 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/09 23:59:18 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERVER_HPP
 #define SERVER_HPP
 
-#include "includes.hpp"
-#include "config/ConfigParser.hpp"
-#include "config/ServerConfig.hpp"
-#include "request_parser/HttpRequest.hpp"
-#include "request_parser/RequestParser.hpp"
-#include "response_builder/ResponseBuilder.hpp"
+#include "include.hpp"
+#include "ServerSocket.hpp"
+#include "ConfigParser.hpp"
+#include "ServerConfig.hpp"
+#include "HttpRequest.hpp"
+#include "RequestParser.hpp"
+#include "EventManager.hpp"
+// #include "ResponseBuilder.hpp"
+class ServerSocket;
+class EventManager;
 
 class Server {
 private:
+    EventManager *eventManager;
 public:
     //unique pairs of host and ip address
     std::set<std::pair<std::string, int > > unique; // automatically prevents duplicate host-port combination --- but why ? We nned a socket per server even if they have duplicate host-port... if they have a different server-name then we need different sockets... Arturo asking

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   RequestResponse.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 10:16:00 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/09 14:43:10 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/10 01:17:28 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef REQUEST_RESPONSE_HPP
 #define REQUEST_RESPONSE_HPP
 
-#include "includes.hpp"
+#include "include.hpp"
 
 
 class RequestResponse {

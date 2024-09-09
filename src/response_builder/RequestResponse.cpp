@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   RequestResponse.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 10:17:15 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/09 14:43:45 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/10 01:17:57 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RequestResponse.hpp"
+#include "../../includes/RequestResponse.hpp"
 
 RequestResponse::RequestResponse() {
 }

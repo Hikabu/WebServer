@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:09:33 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/09 14:09:39 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/10 00:54:00 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "includes.hpp"
+#include "../includes/include.hpp"
 
-#include "server/Server.hpp"
-#include "config/ConfigParser.hpp"
-#include "config/ServerConfig.hpp"
-#include "request_parser/HttpRequest.hpp"
-#include "response_builder/ResponseBuilder.hpp"
+#include "../includes/Server.hpp"
+#include "../includes/ConfigParser.hpp"
+#include "../includes/ServerConfig.hpp"
+#include "../includes/HttpRequest.hpp"
+// #include "../includes/ResponseBuilder.hpp"
 
 
 int main(int argc, char* argv[]) {
