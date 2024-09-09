@@ -6,7 +6,7 @@
 /*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 10:16:00 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/06 15:29:21 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/09 14:43:10 by bperez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define REQUEST_RESPONSE_HPP
 
 #include "includes.hpp"
+
 
 class RequestResponse {
 public:
@@ -25,7 +26,8 @@ public:
 	std::string getStatusCode() const;
 	std::string getStatusMessage() const;
 	std::string getContentType() const;
-	std::string getContentLength() const;
+	std::string getContentDisposition() const;
+	size_t getContentLength() const;
 	std::string getType() const;
 
 	//Setters
@@ -33,9 +35,9 @@ public:
 	void setStatusCode(const std::string& statusCode);
 	void setStatusMessage(const std::string& statusMessage);
 	void setContentType(const std::string& contentType);
-	void setContentLength(const std::string& contentLength);
+	void setContentLength(size_t contentLength);
 	void setType(const std::string& type);
-
+	void setContentDisposition(const std::string& contentDisposition);
     std::string toString() const;
 
 private:
@@ -43,7 +45,8 @@ private:
 	std::string statusCode;
 	std::string statusMessage;
 	std::string contentType;
-	std::string contentLength;
+	std::string contentDisposition;
+	size_t contentLength;
 
 };
 
