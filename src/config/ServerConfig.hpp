@@ -6,7 +6,7 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 13:38:57 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/08 12:34:48 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/09/09 11:16:26 by bperez-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ public:
     int getPort() const;
     std::string getHost() const;
     const std::string& getServerName() const;
-    const std::map<int, std::string>& getErrorPages() const;
+    const std::map<std::string, std::string>& getErrorPages() const;
     size_t getClientMaxBodySize() const;
     const std::string& getRoot() const;
     const std::string& getIndex() const;
@@ -57,7 +57,7 @@ public:
     void setPort(int value);
     void setHost(const std::string& value);
     void setServerName(const std::string& value);
-    void setErrorPages(const std::map<int, std::string>& value);
+    void setErrorPages(const std::map<std::string, std::string>& value);
     void setClientMaxBodySize(size_t value);
     void setRoot(const std::string& value);
     void setIndex(const std::string& value);
@@ -72,7 +72,7 @@ private:
     int port;
     std::string host;
     std::string serverName;
-    std::map<int, std::string> errorPages;
+    std::map<std::string, std::string> errorPages;
     size_t clientMaxBodySize;
     std::string root;
     std::string index;
