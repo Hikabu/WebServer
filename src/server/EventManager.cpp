@@ -1,4 +1,5 @@
 #include "../../includes/EventManager.hpp"
+#include "../../includes/Server.hpp"
 
 EventManager::EventManager() : maxSocket(0)
 {
@@ -88,7 +89,20 @@ void EventManager::waitandleEvents()
                 int byteWrite = 1024;
                 (void) byteWrite;
                 std::cout << "Wow im here\n";
-            }
+                // std::cout << "------------------Request received-------------------" << std::endl;
+                // std::cout << buffer << std::endl;
+                // HttpRequest request = RequestParser::parse(buffer);
+                // std::cout << "------------------Request parsed-------------------" << std::endl;
+                // std::cout << request << std::endl;
+                // RequestResponse response = ResponseBuilder::build(request, config[i]);
+                // std::cout << "------------------Response built-------------------" << std::endl;
+                // std::cout << response << std::endl;
+                // //std::cout << response.toString() << std::endl;
+                // std::string responseStr = response.toString();
+                // send(currentSocket, responseStr.c_str(), responseStr.length(), 0);
+                // std::cout << "------------------HTML content sent-------------------" << std::endl;
+                // close(new_socket);
+		    }
         }
     }
 }
