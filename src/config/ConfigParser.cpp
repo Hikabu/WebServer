@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ConfigParser.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:06:17 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/09 14:09:08 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/09 23:25:50 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ConfigParser.hpp"
+#include "../../includes/ConfigParser.hpp"
 std::vector<ServerConfig> ConfigParser::parse(const std::string& configFile) {
     std::vector<ServerConfig> servers;
     ServerConfig currentServer;
