@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ServerConfig.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 14:12:10 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/09 14:12:11 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/09/09 23:26:11 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "ServerConfig.hpp"
+#include "../../includes/ServerConfig.hpp"
 
 // Default constructor
 ServerConfig::ServerConfig() { }
