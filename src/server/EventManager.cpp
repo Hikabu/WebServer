@@ -9,6 +9,14 @@ EventManager::EventManager() : maxSocket(0)
     FD_ZERO(&write_master);
     servers = std::vector<Server>();
 }
+
+void EventManager::copyArray(std::vector<Server> &arrServers)
+{
+    for (size_t i = 0; i < arrServers.size(); i++)
+    {
+        this->servers.push_back(arrServers[i]);
+    }
+}
 EventManager::~EventManager(){}
 
 void EventManager::addServerSocket(ServerSocket &serverSocket) //adds the fd of the new server socket to the master

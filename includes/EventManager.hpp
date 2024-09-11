@@ -29,6 +29,7 @@ class EventManager{
         void addServerSocket(ServerSocket &serverSocket);
         void waitandleEvents();
         void CreateAddClientSocket(ServerSocket &Socket);
+        void copyArray(std::vector<Server> &arrServers);
 };
 
 #endif
