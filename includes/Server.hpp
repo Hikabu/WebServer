@@ -28,7 +28,10 @@ class Server {
 private:
     EventManager *eventManager;
 public:
-    Server &operator=(const Server &copy){*this = copy;}
+    Server &operator=(const Server &copy){
+        if (this != &copy){}
+        return (*this);
+    }
     //unique pairs of host and ip address
     std::set<std::pair<std::string, int > > unique; // automatically prevents duplicate host-port combination --- but why ? We nned a socket per server even if they have duplicate host-port... if they have a different server-name then we need different sockets... Arturo asking
     std::vector<ServerConfig>& config;
