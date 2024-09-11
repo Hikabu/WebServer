@@ -6,7 +6,7 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 16:31:54 by artclave          #+#    #+#             */
-/*   Updated: 2024/09/10 01:26:31 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/09/12 02:13:57 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,9 @@ void	check_non_blocking(int sockfd){
 
 void Server::createUniquePair() //create unique pairs of host (IP address) and port from a collection of server_configs
 {
+	std::cout << config.size() << std::endl;
 	for (size_t i = 0; i < config.size(); i++) {
+		std::cout << config[i].getHost() << std::endl;
 		std::pair<std::string, int> uniquePair = std::make_pair(config[i].getHost(), config[i].getPort()); //auto type /pair from different type;
 		unique.insert(uniquePair);
 	}
@@ -56,20 +58,6 @@ void Server::createEventManager() {
 void Server::run(){
 	createUniquePair(); //prevent duplicate configurations, prepares the data for the createEventManager()
 	createEventManager();
+	eventManager->copyArray(servers);
 	eventManager->waitandleEvents();
-	// uses only unique pairs to set up listening sockets
-// 		//1. Creates, binds and listens -> create listening socket ?
-// // Create a Socket: Use socket() to create a socket for communication.
-// // Bind: Use bind() to bind the socket to an address and port.
-// // Listen: Use listen() to listen for incoming connections.
-
-// 		//accept
-
-// 	}
-// 		//2.Set up select
-
-// 		//3. Accept connection 
-// // Accept: Use accept() to accept incoming connections.
-// // Respond: Send a simple HTTP response using send().
-// // Close: Close the connection using close().
 }

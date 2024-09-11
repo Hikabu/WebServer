@@ -6,7 +6,7 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 16:33:26 by artclave          #+#    #+#             */
-/*   Updated: 2024/09/09 23:59:18 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/09/12 02:15:12 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ public:
     //unique pairs of host and ip address
     std::set<std::pair<std::string, int > > unique; // automatically prevents duplicate host-port combination --- but why ? We nned a socket per server even if they have duplicate host-port... if they have a different server-name then we need different sockets... Arturo asking
     std::vector<ServerConfig>& config;
+    std::vector<Server> servers;
     Server(std::vector<ServerConfig>& config);
     ~Server();
     void	run();
@@ -40,5 +41,6 @@ public:
     // std::vector<ServerConfig>& getConfig() ;
 	std::vector<int> create_listen_sockets(struct socaddr &addr);
 };
+
 
 #endif
