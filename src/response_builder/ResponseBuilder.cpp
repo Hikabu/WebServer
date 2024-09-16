@@ -6,13 +6,22 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 10:15:30 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/10 01:16:35 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/09/13 13:17:43 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/ResponseBuilder.hpp"
 #include "../../includes/ResponseUtils.hpp"
 #include <iostream>
+
+ResponseBuilder::ResponseBuilder() : sentLenght(0) {}
+
+std::string ResponseBuilder::getIpAddress() const {return ipAddress;}
+int ResponseBuilder::getPort() const {return port;}
+
+void ResponseBuilder::setIpAddress(std::string ipAddress){this->ipAddress = ipAddress;}
+void ResponseBuilder::setPort(int port) {this->port = port;}
+
 
 RequestResponse ResponseBuilder::build(HttpRequest& request, ServerConfig& config) {
 	std::cout << "DEBUG: Entering ResponseBuilder::build" << std::endl;

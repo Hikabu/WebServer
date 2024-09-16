@@ -6,7 +6,7 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:11:38 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/09 23:26:37 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/09/13 13:29:07 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #define HTTPREQUEST_HPP
 
 #include "include.hpp"
+#include "RequestParser.hpp"
+
+class RequestParser;
 
 class HttpRequest {
 public:
@@ -26,6 +29,10 @@ public:
     std::string getPath() const;
     std::string getProtocol() const;
 	std::string getType() const;
+
+    //for request
+    std::string request;
+    RequestParser requestParser;
 
 	void setMethod(const std::string& method);
 	void setPath(const std::string& path);

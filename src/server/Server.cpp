@@ -6,7 +6,7 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 16:31:54 by artclave          #+#    #+#             */
-/*   Updated: 2024/09/12 02:13:57 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/09/13 11:52:07 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 #include "../../includes/EventManager.hpp"
 #include <string.h>
 
-
+Server::Server() : port(0), 			
+				   clientMaxBodySize(0), 
+				   serverName(""),
+				   serverConf(std::vector<std::string>()),
+				   config(*(new std::vector<ServerConfig>())) {}
+	// this->locations = std::vector<Location>();}
+	
 Server::Server(std::vector<ServerConfig>& config) : config(config) {
 	eventManager = new EventManager();
 	(void)config;
 }
 
-Server::~Server(){
-	
-}
+Server::~Server(){}
 
 void	check_non_blocking(int sockfd){
 	 int flags = fcntl(sockfd, F_GETFL, 0);

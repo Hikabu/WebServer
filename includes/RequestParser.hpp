@@ -6,7 +6,7 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 09:56:07 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/10 00:55:48 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/09/13 13:28:52 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 #include "../includes/include.hpp"
 #include "../includes/HttpRequest.hpp"
 
+// class HttpRequest;
+
 class RequestParser {
 public:
     static HttpRequest parse(const std::string& request_str);
 
-private:
     RequestParser() {}
+private:
 };
 
 #endif

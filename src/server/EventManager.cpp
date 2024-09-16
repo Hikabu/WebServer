@@ -1,5 +1,6 @@
 #include "../../includes/EventManager.hpp"
 #include "../../includes/Server.hpp"
+#include "../../includes/Client.hpp"
 
 EventManager::EventManager() : maxSocket(0)
 {
@@ -93,10 +94,28 @@ void EventManager::waitandleEvents() //handle multiple client connections
                     FD_CLR(currentSocket, &read_master);
                 }
                 else if (bytesRead < 3000) {
-                    //add somwhere to request 
+                    current.request.request += std::string(buffer, bytesRead);
                     FD_CLR(currentSocket, &write_master);
                     FD_SET(currentSocket, &write_master);
-                    //some important request stuff
+                    
+                    current.request.requestParser.parse(current.request.request);
+                    current.response.setIpAddress(current.getIp());
+                    current.response.setPort(current.getPort());
+					  std::cout << "------------------Request parsed-------------------" << std::endl;
+					std::cout << current.request << std::endl;
+					RequestResponse response = ResponseBuilder::build(current.request, current.server.config[0]);
+					std::cout << "------------------Response built-------------------" << std::endl;
+					std::cout << response << std::endl;
+					//std::cout << response.toString() << std::endl;
+					std::string responseStr = response.toString();
+					send(currentSocket, responseStr.c_str(), responseStr.length(), 0);// Sends data on a socket.
+					std::cout << "------------------HTML content sent-------------------" << std::endl;
+                // close(new_socket);
+                    // current.response.generateResponse(current.request, servers);
+                    current.request.request.clear();// for clear 
+                }
+                else {
+                    current.request.request += std::string(buffer, bytesRead);
                 }
             }
             if (FD_ISSET(currentSocket, &writeSet)) { //sending data to clients that are ready to receive.
@@ -106,16 +125,7 @@ void EventManager::waitandleEvents() //handle multiple client connections
                 // std::cout << "------------------Request received-------------------" << std::endl;
                 // std::cout << buffer << std::endl;
                 // HttpRequest request = RequestParser::parse(buffer);
-                // std::cout << "------------------Request parsed-------------------" << std::endl;
-                // std::cout << request << std::endl;
-                // RequestResponse response = ResponseBuilder::build(request, config[i]);
-                // std::cout << "------------------Response built-------------------" << std::endl;
-                // std::cout << response << std::endl;
-                // //std::cout << response.toString() << std::endl;
-                // std::string responseStr = response.toString();
-                // send(currentSocket, responseStr.c_str(), responseStr.length(), 0);// Sends data on a socket.
-                // std::cout << "------------------HTML content sent-------------------" << std::endl;
-                // close(new_socket);
+              
 		    }
         }
     }
