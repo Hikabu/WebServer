@@ -6,7 +6,7 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:09:33 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/12 11:17:37 by artclave         ###   ########.fr       */
+/*   Updated: 2024/09/17 22:14:09 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ int main(int argc, char* argv[]) {
 		config[i].print();
 	}
 	try {
-		Server server(config);
-		server.run();	
+		Server server;
+		server.run(config);	
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 		return (1);

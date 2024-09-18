@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Sep 16 16:50:54 2024
+# Make data base, printed on Wed Sep 18 09:25:36 2024
 
 # Variables
 
@@ -18,7 +18,8 @@ LC_ALL = C
 SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 GJS_DEBUG_OUTPUT = stderr
-# makefile (from 'Makefile', line 58)
+# makefile (from 'Makefile', line 7)
+ 
 SRC_DIR = src
 # environment
 LC_NAME = en_US.UTF-8
@@ -28,7 +29,6 @@ LC_NUMERIC = en_US.UTF-8
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
 VSCODE_CWD = /home/artclave
- 
 # environment
 LC_ADDRESS = en_US.UTF-8
 # environment
@@ -39,7 +39,7 @@ MAKE_COMMAND := make
 QT_ACCESSIBILITY = 1
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
-# makefile (from 'Makefile', line 59)
+# makefile (from 'Makefile', line 8)
 OBJ_DIR = obj
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
@@ -73,12 +73,12 @@ XAUTHORITY = /home/artclave/.Xauthority
 MAKEFLAGS = pqrR
 # makefile
 CURDIR := /home/artclave/group_server
-# makefile (from 'Makefile', line 60)
+# makefile (from 'Makefile', line 9)
 INC_DIR = src
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# makefile (from 'Makefile', line 63)
-SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/config/ConfigParser.cpp $(SRC_DIR)/config/ServerConfig.cpp $(SRC_DIR)/request_parser/HttpRequest.cpp $(SRC_DIR)/request_parser/RequestParser.cpp $(SRC_DIR)/response_builder/ResponseBuilder.cpp $(SRC_DIR)/post_request_body_handling/PostRequestBodySnatcher.cpp $(SRC_DIR)/post_request_body_handling/PostRequestBodyPart.cpp $(SRC_DIR)/response_builder/RequestResponse.cpp $(SRC_DIR)/response_builder/ResponseUtils.cpp $(SRC_DIR)/server/Server.cpp 
+# makefile (from 'Makefile', line 12)
+SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/config/ConfigParser.cpp $(SRC_DIR)/config/ServerConfig.cpp $(SRC_DIR)/request_parser/HttpRequest.cpp $(SRC_DIR)/request_parser/RequestParser.cpp $(SRC_DIR)/response_builder/ResponseBuilder.cpp $(SRC_DIR)/post_request_body_handling/PostRequestBodySnatcher.cpp $(SRC_DIR)/post_request_body_handling/PostRequestBodyPart.cpp $(SRC_DIR)/response_builder/RequestResponse.cpp $(SRC_DIR)/response_builder/ResponseUtils.cpp $(SRC_DIR)/server/Server.cpp $(SRC_DIR)/server/Multiplex.cpp $(SRC_DIR)/server/ServerSocket.cpp $(SRC_DIR)/server/Address.cpp $(SRC_DIR)/server/ClientSocket.cpp $(SRC_DIR)/server/Connection.cpp 
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -98,15 +98,15 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 83079
+VSCODE_PID = 1072684
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_103610_0t8150
+KRB5CCNAME = FILE:/tmp/krb5cc_103610_tsKwjk
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/z1t4c1.42bangkok.com:@/tmp/.ICE-unix/72170,unix/z1t4c1.42bangkok.com:/tmp/.ICE-unix/72170
+SESSION_MANAGER = local/z1t3c1.42bangkok.com:@/tmp/.ICE-unix/1069461,unix/z1t3c1.42bangkok.com:/tmp/.ICE-unix/1069461
 # automatic
 *F = $(notdir $*)
 # environment
@@ -119,7 +119,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/103610/bus
 VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en","availableLanguages":{}}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
-# makefile (from 'Makefile', line 76)
+# makefile (from 'Makefile', line 30)
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 # environment
 GNOME_DESKTOP_SESSION_ID = this-is-deprecated
@@ -150,14 +150,14 @@ LC_MONETARY = en_US.UTF-8
 # environment
 LC_TIME = en_US.UTF-8
 # environment
-INVOCATION_ID = b0d80585f6d848b4a449b73e95e012ef
+INVOCATION_ID = f8d34509c7464e77a1151b30e1c78930
 # environment
 DOCKER_HOST = unix:///run/user/103610/docker.sock
 # environment
 LC_TELEPHONE = en_US.UTF-8
 # automatic
 ?F = $(notdir $?)
-# makefile (from 'Makefile', line 79)
+# makefile (from 'Makefile', line 33)
 NAME = webserv
 # environment
 GTK_IM_MODULE = ibus
@@ -180,7 +180,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 72193
+SYSTEMD_EXEC_PID = 1069493
 # environment
 DISPLAY = :0
 # environment
@@ -190,13 +190,13 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 71339
+MANAGERPID = 1068656
 # environment
 DEBUGINFOD_URLS = https://debuginfod.ubuntu.com 
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 83079
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1072684
 # environment
 _ = /usr/share/code/code
 # environment
@@ -206,7 +206,7 @@ XDG_RUNTIME_DIR = /run/user/103610
 # environment
 GPG_AGENT_INFO = /run/user/103610/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:15704859
+JOURNAL_STREAM = 8:6792709
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -231,22 +231,23 @@ IM_CONFIG_PHASE = 1
 SUFFIXES := 
 # environment
 FT_HOOK_NAME = login-user
-# makefile (from 'Makefile', line 55)
+# makefile (from 'Makefile', line 4)
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 # environment
 XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/artclave
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
-# makefile (from 'Makefile', line 54)
+# makefile (from 'Makefile', line 3)
 CXX = c++
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
 GDMSESSION = ubuntu
 # environment
+ 
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=117/1024=11%, Rehash=0, Collisions=5/166=3%
+# Load=117/1024=11%, Rehash=0, Collisions=5/178=3%
 
 # Pattern-specific Variable Values
 
@@ -255,20 +256,19 @@ LC_IDENTIFICATION = en_US.UTF-8
 # Directories
 
 # src/config (device 2064, inode 12777672): 5 files, no impossibilities so far.
-# src/server (device 2064, inode 8527165): 3 files, no impossibilities so far.
+# src/server (device 2064, inode 8527165): 15 files, no impossibilities so far.
 # src/request_parser (device 2064, inode 16874160): 5 files, no impossibilities so far.
 # src (device 2064, inode 4248721): 10 files, no impossibilities so far.
-# . (device 2064, inode 21017665): 18 files, no impossibilities.
+# . (device 2064, inode 21017665): 19 files, no impossibilities.
 # src/response_builder (device 2064, inode 21127054): 7 files, no impossibilities so far.
 # src/post_request_body_handling (device 2064, inode 26753306): 5 files, no impossibilities so far.
 
-# 53 files, no impossibilities in 7 directories.
+# 66 files, no impossibilities in 7 directories.
 
 # Implicit Rules
 
- 
 obj/%.o: src/%.cpp
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
@@ -278,10 +278,10 @@ obj/%.o: src/%.cpp
 obj/response_builder/ResponseUtils.o: src/response_builder/ResponseUtils.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'response_builder/ResponseUtils'
-#  Last modified 2024-09-16 11:50:57.84586758
+#  Last modified 2024-09-18 09:10:40.999995455
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
@@ -302,51 +302,89 @@ src/config/ServerConfig.cpp:
 obj/request_parser/RequestParser.o: src/request_parser/RequestParser.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'request_parser/RequestParser'
-#  Last modified 2024-09-16 11:50:56.769823202
+#  Last modified 2024-09-18 09:10:39.935955381
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 obj/response_builder/RequestResponse.o: src/response_builder/RequestResponse.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'response_builder/RequestResponse'
-#  Last modified 2024-09-16 11:50:57.621858342
+#  Last modified 2024-09-18 09:10:40.771986868
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+obj/server/Multiplex.o: src/server/Multiplex.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'server/Multiplex'
+#  Last modified 2024-09-18 09:10:41.432011726
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 42):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+obj/server/ClientSocket.o: src/server/ClientSocket.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'server/ClientSocket'
+#  Last modified 2024-09-18 09:10:42.032034324
+#  File has been updated.
+#  Successfully updated.
+ 
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 obj/main.o: src/main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2024-09-16 12:39:11.871837729
+#  Last modified 2024-09-18 09:10:39.011920579
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+# Not a target:
+src/server/Multiplex.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-18 04:04:07.075430903
+#  File has been updated.
+#  Successfully updated.
+
+obj/server/ServerSocket.o: src/server/ServerSocket.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'server/ServerSocket'
+#  Last modified 2024-09-18 09:15:45.515442427
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 # Not a target:
 src/response_builder/ResponseBuilder.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-13 19:43:28.676422
+#  Last modified 2024-09-17 04:54:43.847295885
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-16 12:39:06.631666744
+#  Last modified 2024-09-18 09:25:31.661403055
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-16 12:39:06.631666744
+#  Last modified 2024-09-17 22:14:09.840288968
 #  File has been updated.
 #  Successfully updated.
 
@@ -355,33 +393,42 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 92):
+#  recipe to execute (from 'Makefile', line 46):
 	rm -rf $(OBJ_DIR)
+
+# Not a target:
+src/server/Connection.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-18 09:24:18.386660715
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 src/request_parser/HttpRequest.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-12 11:49:40.02319
+#  Last modified 2024-09-17 04:54:43.847295885
 #  File has been updated.
 #  Successfully updated.
 
 obj/post_request_body_handling/PostRequestBodyPart.o: src/post_request_body_handling/PostRequestBodyPart.cpp
 #  Implicit rule search has been done.
+ 
 #  Implicit/static pattern stem: 'post_request_body_handling/PostRequestBodyPart'
-#  Last modified 2024-09-16 11:50:57.421850093
+#  Last modified 2024-09-18 09:10:40.575979487
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
-webserv: obj/main.o obj/config/ConfigParser.o obj/config/ServerConfig.o obj/request_parser/HttpRequest.o obj/request_parser/RequestParser.o obj/response_builder/ResponseBuilder.o obj/post_request_body_handling/PostRequestBodySnatcher.o obj/post_request_body_handling/PostRequestBodyPart.o obj/response_builder/RequestResponse.o obj/response_builder/ResponseUtils.o obj/server/Server.o
+webserv: obj/main.o obj/config/ConfigParser.o obj/config/ServerConfig.o obj/request_parser/HttpRequest.o obj/request_parser/RequestParser.o obj/response_builder/ResponseBuilder.o obj/post_request_body_handling/PostRequestBodySnatcher.o obj/post_request_body_handling/PostRequestBodyPart.o obj/response_builder/RequestResponse.o obj/response_builder/ResponseUtils.o obj/server/Server.o obj/server/Multiplex.o obj/server/ServerSocket.o obj/server/Address.o obj/server/ClientSocket.o obj/server/Connection.o
 #  Implicit rule search has not been done.
-#  Last modified 2024-09-16 12:39:12.243849871
+#  Last modified 2024-09-18 09:20:26.13396402
 #  File has been updated.
- 
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 85):
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
+#  recipe to execute (from 'Makefile', line 39):
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 re: fclean all
@@ -393,7 +440,14 @@ re: fclean all
 # Not a target:
 src/response_builder/ResponseUtils.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-13 19:43:28.676422
+#  Last modified 2024-09-17 04:54:43.847295885
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/server/ServerSocket.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-18 09:15:40.835266769
 #  File has been updated.
 #  Successfully updated.
 
@@ -406,7 +460,7 @@ src/response_builder/ResponseUtils.cpp:
 # Not a target:
 src/request_parser/RequestParser.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-12 11:49:40.02319
+#  Last modified 2024-09-17 04:54:43.847295885
 #  File has been updated.
 #  Successfully updated.
 
@@ -416,15 +470,17 @@ all: webserv
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
 
 obj/server/Server.o: src/server/Server.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'server/Server'
-#  Last modified 2024-09-16 12:39:12.171847521
+#  Last modified 2024-09-18 09:10:41.236004345
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
@@ -433,13 +489,13 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 95):
+#  recipe to execute (from 'Makefile', line 49):
 	rm -f $(NAME)
 
 # Not a target:
 src/server/Server.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-16 12:39:06.631666744
+#  Last modified 2024-09-18 05:26:10.191763402
 #  File has been updated.
 #  Successfully updated.
 
@@ -447,28 +503,63 @@ run: all
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 100):
+#  recipe to execute (from 'Makefile', line 54):
 	./$(NAME) conf/default.conf
 
 obj/post_request_body_handling/PostRequestBodySnatcher.o: src/post_request_body_handling/PostRequestBodySnatcher.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'post_request_body_handling/PostRequestBodySnatcher'
-#  Last modified 2024-09-16 11:50:57.233842339
+#  Last modified 2024-09-18 09:10:40.387972405
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+obj/server/Connection.o: src/server/Connection.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'server/Connection'
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/server/Connection.o
+# automatic
+# * := server/Connection
+# automatic
+# < := src/server/Connection.cpp
+# automatic
+# + := src/server/Connection.cpp
+# automatic
+# % := 
+# automatic
+# ^ := src/server/Connection.cpp
+# automatic
+# ? := src/server/Connection.cpp
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/18=6%
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 obj/config/ServerConfig.o: src/config/ServerConfig.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'config/ServerConfig'
-#  Last modified 2024-09-16 11:50:56.341805549
+#  Last modified 2024-09-18 09:10:39.519939712
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+# Not a target:
+src/server/Address.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-18 02:35:20.754126267
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 src/post_request_body_handling/PostRequestBodyPart.cpp:
@@ -477,24 +568,33 @@ src/post_request_body_handling/PostRequestBodyPart.cpp:
 #  File has been updated.
 #  Successfully updated.
 
+obj/server/Address.o: src/server/Address.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'server/Address'
+#  Last modified 2024-09-18 09:10:41.832026792
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 42):
+	@mkdir -p $(@D)
+	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
 obj/config/ConfigParser.o: src/config/ConfigParser.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'config/ConfigParser'
-#  Last modified 2024-09-16 11:50:56.089795155
+#  Last modified 2024-09-18 09:10:39.267930221
 #  File has been updated.
- 
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 obj/request_parser/HttpRequest.o: src/request_parser/HttpRequest.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'request_parser/HttpRequest'
-#  Last modified 2024-09-16 11:50:56.569814954
+#  Last modified 2024-09-18 09:10:39.735947847
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
@@ -508,12 +608,19 @@ src/config/ConfigParser.cpp:
 obj/response_builder/ResponseBuilder.o: src/response_builder/ResponseBuilder.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'response_builder/ResponseBuilder'
-#  Last modified 2024-09-16 11:50:57.025833762
+#  Last modified 2024-09-18 09:10:40.183964721
 #  File has been updated.
 #  Successfully updated.
-#  recipe to execute (from 'Makefile', line 88):
+#  recipe to execute (from 'Makefile', line 42):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
+
+# Not a target:
+src/server/ClientSocket.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2024-09-18 08:54:20.282477792
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 src/post_request_body_handling/PostRequestBodySnatcher.cpp:
@@ -528,19 +635,19 @@ src/post_request_body_handling/PostRequestBodySnatcher.cpp:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=32/1024=3%, Rehash=0, Collisions=3/97=3%
+# Load=42/1024=4%, Rehash=0, Collisions=3/127=2%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 90 / storage = 1803 B / avg = 20 B
-# current buf: size = 8162 B / used = 1803 B / count = 90 / avg = 20 B
+# strcache buffers: 1 (0) / strings = 117 / storage = 2309 B / avg = 19 B
+# current buf: size = 8162 B / used = 2309 B / count = 117 / avg = 19 B
 
-# strcache performance: lookups = 137 / hit rate = 34%
+# strcache performance: lookups = 170 / hit rate = 31%
 # hash-table stats:
-# Load=90/8192=1%, Rehash=0, Collisions=5/137=4%
-# Finished Make data base on Mon Sep 16 16:50:54 2024
+# Load=117/8192=1%, Rehash=0, Collisions=7/170=4%
+# Finished Make data base on Wed Sep 18 09:25:36 2024
 
  
