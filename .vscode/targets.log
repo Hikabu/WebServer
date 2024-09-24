@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Sep 24 21:36:29 2024
+# Make data base, printed on Wed Sep 25 04:56:23 2024
 
 # Variables
 
@@ -16,8 +16,6 @@ GDK_BACKEND = x11
 LC_ALL = C
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
-# environment
-GJS_DEBUG_OUTPUT = stderr
 # makefile (from 'Makefile', line 58)
 SRC_DIR = src
 # environment
@@ -27,13 +25,11 @@ LC_NUMERIC = en_US.UTF-8
 # environment
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
-VSCODE_CWD = /home/artclave
+VSCODE_CWD = /home/artclave/Desktop/WebServer
 # environment
 LC_ADDRESS = en_US.UTF-8
 # environment
 LIBVIRT_DEFAULT_URI = qemu:///system
-# environment
-GDM_LANG = en
 # default
 MAKE_COMMAND := make
 # environment
@@ -53,7 +49,7 @@ PWD = /home/artclave/Desktop/WebServer
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/home/artclave/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-OLDPWD = /home/artclave
+OLDPWD = /home/artclave/Desktop
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
@@ -61,7 +57,7 @@ OLDPWD = /home/artclave
 # environment
 VSCODE_CODE_CACHE_PATH = /home/artclave/.config/Code/CachedData/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session3
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
 LANG = C
 # environment
@@ -70,6 +66,8 @@ XAUTHORITY = /home/artclave/.Xauthority
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# environment
+GNOME_TERMINAL_SERVICE = :1.2538
 # makefile
 MAKEFLAGS = pqrR
 # makefile
@@ -99,15 +97,15 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 4064233
+VSCODE_PID = 84906
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_103610_5Kh42C
+KRB5CCNAME = FILE:/tmp/krb5cc_103610_qaE8gx
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/z2t13c1.42bangkok.com:@/tmp/.ICE-unix/4060790,unix/z2t13c1.42bangkok.com:/tmp/.ICE-unix/4060790
+SESSION_MANAGER = local/z2t13c1.42bangkok.com:@/tmp/.ICE-unix/4142602,unix/z2t13c1.42bangkok.com:/tmp/.ICE-unix/4142602
 # automatic
 *F = $(notdir $*)
 # environment
@@ -131,9 +129,9 @@ MAKECMDGOALS := all
 # environment
 XMODIFIERS = @im=ibus
 # environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
-# environment
 SHLVL = 1
+# environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/ae7e18a5_9251_4529_8059_54a14ea15e78
 # environment
 MAKELEVEL := 0
 # default
@@ -150,8 +148,6 @@ LC_MONETARY = en_US.UTF-8
 ^F = $(notdir $^)
 # environment
 LC_TIME = en_US.UTF-8
-# environment
-INVOCATION_ID = b15779a8ef1e4a0bbd6e73a97328418d
 # environment
 DOCKER_HOST = unix:///run/user/103610/docker.sock
 # environment
@@ -176,12 +172,10 @@ ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 GNUMAKEFLAGS := 
 # environment
 LOGNAME = artclave
-# environment
-GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 4060813
+SYSTEMD_EXEC_PID = 4142629
 # environment
 DISPLAY = :0
 # environment
@@ -191,15 +185,11 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 4060004
-# environment
 DEBUGINFOD_URLS = https://debuginfod.ubuntu.com 
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 4064233
-# environment
-_ = /usr/share/code/code
+_ = /usr/bin/code
 # environment
 LC_PAPER = en_US.UTF-8
 # environment
@@ -207,7 +197,7 @@ XDG_RUNTIME_DIR = /run/user/103610
 # environment
 GPG_AGENT_INFO = /run/user/103610/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:29001639
+COLORTERM = truecolor
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -221,6 +211,8 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/103610/vscode-e449c818-1.92-main.sock
 # environment
+TERM = xterm-256color
+# environment
 FT_HOOK_PATHNAME = login-user.d
 # environment
 IM_CONFIG_PHASE = 1
@@ -231,7 +223,13 @@ IM_CONFIG_PHASE = 1
 # default
 SUFFIXES := 
 # environment
+VSCODE_CLI = 1
+# environment
 FT_HOOK_NAME = login-user
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VTE_VERSION = 6800
 # makefile (from 'Makefile', line 55)
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 # environment
@@ -247,7 +245,7 @@ GDMSESSION = ubuntu
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=118/1024=12%, Rehash=0, Collisions=6/174=3%
+# Load=117/1024=11%, Rehash=0, Collisions=13/173=8%
 
 # Pattern-specific Variable Values
 
@@ -255,8 +253,8 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# src (device 2064, inode 101427): 6 files, no impossibilities so far.
-# . (device 2064, inode 16809176): 17 files, no impossibilities.
+# src (device 2064, inode 12588984): 6 files, no impossibilities so far.
+# . (device 2064, inode 29455890): 17 files, no impossibilities.
 
 # 23 files, no impossibilities in 2 directories.
 
@@ -297,7 +295,6 @@ obj/main.o: src/main.cpp
 # automatic
 # @ := obj/main.o
 # automatic
- 
 # * := main
 # automatic
 # < := src/main.cpp
@@ -309,6 +306,7 @@ obj/main.o: src/main.cpp
 # ^ := src/main.cpp
 # automatic
 # ? := src/main.cpp
+ 
 # automatic
 # | := 
 # variable set hash-table stats:
@@ -320,14 +318,14 @@ obj/main.o: src/main.cpp
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-24 21:35:42.277210056
+#  Last modified 2024-09-25 04:55:47.865623219
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-24 21:35:42.277210056
+#  Last modified 2024-09-25 04:55:47.865623219
 #  File has been updated.
 #  Successfully updated.
 
@@ -447,6 +445,6 @@ obj/response_builder/ResponseBuilder.o:
 # strcache performance: lookups = 72 / hit rate = 36%
 # hash-table stats:
 # Load=46/8192=1%, Rehash=0, Collisions=4/72=6%
-# Finished Make data base on Tue Sep 24 21:36:29 2024
+# Finished Make data base on Wed Sep 25 04:56:23 2024
 
  
