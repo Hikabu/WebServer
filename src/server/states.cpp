@@ -6,7 +6,7 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:22:33 by artclave          #+#    #+#             */
-/*   Updated: 2024/09/28 12:25:06 by artclave         ###   ########.fr       */
+/*   Updated: 2024/09/28 13:53:08 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,14 @@ void	Server::read_request(struct clientSocket &client)
 	memset(buff, 0, READ_BUFFER_SIZE);
 	std::size_t	pos_zero, pos_content_length, pos_header_end;
 	int bytes = recv(client.fd, &buff[0], READ_BUFFER_SIZE, 0);
-	if (bytes <= 0)
+	if (bytes == 0)
 	{
 		strerror(errno);
 		client.state = DISCONNECT;
 		return ;
 	}
+	if (bytes == -1)
+		return ;
 	client.read_operations++;
 	for (int i = 0; i < bytes; i++)
 		client.read_buffer += buff[i];
@@ -153,11 +155,13 @@ void	Server::write_response(struct clientSocket &client)
 		return ;
 	setsockopt(client.fd, SOL_SOCKET, SO_SNDTIMEO, &timeout, sizeof(timeout));
 	int bytes = send(client.fd, &client.write_buffer[client.write_offset], WRITE_BUFFER_SIZE, 0);
-	if (bytes < 0)
+	if (bytes == 0)
 	{
 		 client.state = DISCONNECT;
 		 return ;
 	}
+	if (bytes == -1)
+		return ;
 	client.write_operations++;
 	client.write_offset += bytes;
 	if (client.write_offset >= static_cast<int>(client.write_buffer.size()))
