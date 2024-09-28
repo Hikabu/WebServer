@@ -6,13 +6,12 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:08:02 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/27 22:02:55 by artclave         ###   ########.fr       */
+/*   Updated: 2024/09/28 12:35:21 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INCLUDES_HPP
 #define INCLUDES_HPP
-
 #include <sys/types.h>    // Provides basic system data types
 #include <sys/socket.h>   // Core socket programming functions
 #include <netinet/in.h>   // Internet address family and structures

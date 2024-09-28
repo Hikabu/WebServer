@@ -6,9 +6,9 @@ import sys
 def generate_random_string(length):
     return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
 
-def generate_large_file(filename, size_in_gb):
+def generate_large_file(filename, size_in_mb):
     chunk_size = 1024 * 1024  # 1 MB
-    total_chunks = size_in_gb * 1024  # Number of 1MB chunks in X GB
+    total_chunks = size_in_mb  # Number of 1MB chunks
 
     with open(filename, 'w') as file:
         for _ in range(total_chunks):
@@ -18,13 +18,13 @@ def generate_large_file(filename, size_in_gb):
 
     actual_size = os.path.getsize(filename)
     print(f"File '{filename}' created.")
-    print(f"Actual size: {actual_size / (1024**3):.2f} GB")
+    print(f"Actual size: {actual_size / (1024**2):.2f} MB")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python script.py <size_in_gb>")
+        print("Usage: python script.py <size_in_mb>")
         sys.exit(1)
     
-    size_in_gb = int(sys.argv[1])
-    filename = f"large_file_{size_in_gb}GB.png"
-    generate_large_file(filename, size_in_gb)
+    size_in_mb = int(sys.argv[1])
+    filename = f"small_file_{size_in_mb}MB.png"
+    generate_large_file(filename, size_in_mb)
