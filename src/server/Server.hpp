@@ -6,7 +6,7 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 16:33:26 by artclave          #+#    #+#             */
-/*   Updated: 2024/09/28 11:10:40 by artclave         ###   ########.fr       */
+/*   Updated: 2024/09/28 12:40:55 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include "request_parser/HttpRequest.hpp"
 #include "request_parser/RequestParser.hpp"
 #include "response_builder/ResponseBuilder.hpp"
+#include "utils.hpp"
 
 enum connection_states
 {
@@ -43,7 +44,6 @@ struct	clientSocket{
 	int				read_operations, write_operations; //will be initialzed to 0 for every client loop, to track that we are not exceeding one operation
 	pid_t			cgi_pid;
 };
-
 struct	serverSocket{
 	int				fd;
 	uint32_t		host;
