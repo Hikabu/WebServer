@@ -16,7 +16,7 @@
 #include "../includes/include.hpp"
 #include "../includes/HttpRequest.hpp"
 
-// class HttpRequest;
+class HttpRequest;
 
 class RequestParser {
 public:
