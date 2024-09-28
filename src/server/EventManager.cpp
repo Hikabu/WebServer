@@ -101,18 +101,8 @@ void EventManager::waitandleEvents() //handle multiple client connections
                     current.request.requestParser.parse(current.request.request);
                     current.response.setIpAddress(current.getIp());
                     current.response.setPort(current.getPort());
-					  std::cout << "------------------Request parsed-------------------" << std::endl;
-					std::cout << current.request << std::endl;
-					RequestResponse response = ResponseBuilder::build(current.request, current.server.config[0]);
-					std::cout << "------------------Response built-------------------" << std::endl;
-					std::cout << response << std::endl;
-					//std::cout << response.toString() << std::endl;
-					std::string responseStr = response.toString();
-					send(currentSocket, responseStr.c_str(), responseStr.length(), 0);// Sends data on a socket.
-					std::cout << "------------------HTML content sent-------------------" << std::endl;
-                // close(new_socket);
-                    // current.response.generateResponse(current.request, servers);
-                    current.request.request.clear();// for clear 
+                    current.response.generateResponse(current.request, servers);
+                    current.request.request.clear();
                 }
                 else {
                     current.request.request += std::string(buffer, bytesRead);
