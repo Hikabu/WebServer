@@ -6,7 +6,7 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:41:35 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/27 21:31:03 by artclave         ###   ########.fr       */
+/*   Updated: 2024/09/28 11:46:03 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,7 +159,7 @@ bool ResponseUtils::openFiles(const std::string& folderPath, const std::string& 
 	//std::cout<<"fd: "<<fd<<std::endl;
 	//std::cout<<"content: "<<content<<std::endl;
 	//std::cout<<"size: "<<content.size()<<std::endl;
-	request.addPostFileFd(fd);
-	request.addPostFileContent(content);
+	request.setPostFileFd(fd);
+	request.setPostFileContent(content);
     return true;
 }

@@ -6,7 +6,7 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 16:31:54 by artclave          #+#    #+#             */
-/*   Updated: 2024/09/28 11:17:58 by artclave         ###   ########.fr       */
+/*   Updated: 2024/09/28 11:57:00 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,23 +152,28 @@ void	Server::manage_files(struct clientSocket &client)
 		if (body_done == false)
 			return ;
 	}
-	if (!client.response.getPostFileContents().empty() && !client.response.getPostFileFds().empty())
+	if (!client.request.getPostFileContent().empty())
 	{
 		if (client.write_operations > 0)
 			return ;
-		int bytes = write(client.response.getPostFileFds().back(), &(client.response.getPostFileContents().back())[client.write_offset], WRITE_BUFFER_SIZE);
+		int bytes = write(client.request.getPostFileFd(), client.request.getPostFileContent().c_str(), WRITE_BUFFER_SIZE * 10);
 		if (bytes < 0)
 			return ; //some error saving teh file what to do here?
 		client.write_operations++;
-		client.write_offset += bytes;
-		if (client.write_offset < static_cast<int>(client.response.getPostFileContents().back().size()))
-			return ;
+		// 	if (static_cast<int>(client.request.getPostFileContent().size()) > 0)
+		// {
+		// 	std::cout<<"size is : "<<client.request.getPostFileContent().size()<<"\n";
+		// 	return ;
+		// }
+		// std::cout<<"bytes-> "<<bytes<<"\n";
+		client.request.getPostFileContent().erase(0, bytes);
+		// if (static_cast<int>(client.request.getPostFileContent().size()) > 0)
+		// {
+		// 	std::cout<<"size is : "<<client.request.getPostFileContent().size()<<"\n";
+		// 	return ;
+		// }
 		client.write_offset = 0;
-		close(client.response.getPostFileFds().back());
-		client.response.popBackPostFileFds();
-		client.response.popBackPostFileContents();
-		if (!client.response.getPostFileContents().empty() && !client.response.getPostFileFds().empty())
-			return ;
+		close(client.request.getPostFileFd());
 	}
 	client.write_buffer = client.response.toString();
 	client.state++;
@@ -348,17 +353,17 @@ void	Server::delete_disconnected_clients(struct serverSocket &server)
 			
 			FD_CLR(server.clientList[j].fd, &read_set);
 			FD_CLR(server.clientList[j].fd, &write_set);
-			std::cout<<"list before : ";
-			for (std::list<int>::iterator it = monitor_fds.begin(); it != monitor_fds.end(); it++)
-				std::cout<<*it<<" ";
-			std::cout<<"\n";
+			// std::cout<<"list before : ";
+			// for (std::list<int>::iterator it = monitor_fds.begin(); it != monitor_fds.end(); it++)
+			// 	std::cout<<*it<<" ";
+			// std::cout<<"\n";
 			//end print
 			monitor_fds.remove(server.clientList[j].fd);
 			//print list before
-			std::cout<<"list after : ";
-			for (std::list<int>::iterator it = monitor_fds.begin(); it != monitor_fds.end(); it++)
-				std::cout<<*it<<" ";
-			std::cout<<"\n\n";
+			// std::cout<<"list after : ";
+			// for (std::list<int>::iterator it = monitor_fds.begin(); it != monitor_fds.end(); it++)
+			// 	std::cout<<*it<<" ";
+			// std::cout<<"\n\n";
 			//end print
 			close(server.clientList[j].fd);
 			server.clientList.erase(server.clientList.begin() + j);
@@ -376,8 +381,9 @@ void	Server::run(){
 	{
 		init_sets_for_select();
 		if (select(*max_element(monitor_fds.begin(), monitor_fds.end()) + 1, &read_set, &write_set, 0, &timeout) < 0)
-			{std::cerr<<"...\n";
-		std::cerr<<strerror(errno)<<"\n";}
+		{
+			std::cerr<<strerror(errno)<<"\n";
+		}
 		for (int i = 0; i < static_cast<int>(serverList.size()); i++)
 		{
 			for (int j = 0; j < static_cast<int>(serverList[i].clientList.size()); j++)
