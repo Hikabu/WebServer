@@ -2,6 +2,7 @@
 #define LIBRARIES_HPP
 
 #include <sys/types.h>
+#include <sys/wait.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <cstring>
@@ -12,7 +13,7 @@
 #include <list>
 #include <sys/select.h>
 #include <iostream>
-#include <ratio>
+// #include <ratio>
 #include <stdexcept>
 #include <fstream>
 #include <fcntl.h>
@@ -22,6 +23,7 @@
 #include <sys/stat.h>
 #include <set>
 #include <dirent.h>
-
+#include <signal.h>
+#include <csignal>
 
 #endif

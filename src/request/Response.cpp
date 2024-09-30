@@ -61,8 +61,8 @@ void Response::generateErrorsPage(int code) {
             break;
         }
     }
-
-    response = "HTTP/1.1 " + std::to_string(code) + " " + errorStatus + "\n";
+	std::stringstream ss;
+    response = "HTTP/1.1 " + std::atoi(code.c_str()) + " " + errorStatus + "\n";
     response += "Content-Type: text/html\n\n";
     std::string line;
     std::ifstream file((errorPagePath + errorPageName).c_str(), std::ios::in | std::ios::binary);
@@ -248,7 +248,7 @@ void Response::handleGet(Request &request) {
             response += "Content-Type: image/svg+xml";
         else
             response += "Content-Type: image/" + url.substr(url.find(".") + 1);
-        response += "\nContent-Length: " + std::to_string(len) + "\n\n";
+        response += "\nContent-Length: " + std::atoi(len.c_str()) + "\n\n";
         std::string line;
         line.resize(len);
         file.read(&line[0], len);
