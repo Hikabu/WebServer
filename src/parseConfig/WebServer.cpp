@@ -17,7 +17,7 @@ bool WebServer::removeComments(std::string &line) {
 }
 
 void WebServer::saveConfigInConfigLine() {
-    std::ifstream inputFile(this->pathConfig);
+    std::ifstream inputFile(this->pathConfig.c_str(), std::ifstream::in);
     if (!inputFile.is_open()) {
         throw std::out_of_range("Error: could not open file");
     }

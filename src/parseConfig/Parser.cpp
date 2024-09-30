@@ -76,7 +76,7 @@ void Parser::cutDataNum(std::string &line, std::string finder, int &data) {
         if (!isValidNum(line, numValue)) {
             throw std::out_of_range("Error: invalid " + finder + " value in config file");
         }
-        data = std::stoul(line);
+        data = std::strtoul(line.c_str(), NULL, 0);
         line.erase();
     }
 }
@@ -93,7 +93,11 @@ void Parser::cutDataMap(std::string &line, std::string finder, std::map<int, std
             if (!isValidNum(strKey, 0)) {
                 throw std::out_of_range("Error: invalid " + finder + " value in config file");
             }
-            int key = std::stoi(strKey);
+			std::stringstream	ss;
+			ss << strKey;
+			int key;
+			ss >> key;
+            // int key = std::atoi(strKey.c_str());
             data[key] = trim(line.substr(spacePos + 1));
         }
         else
