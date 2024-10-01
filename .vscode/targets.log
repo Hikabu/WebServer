@@ -6,8 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Oct  1 15:17:17 2024
- 
+# Make data base, printed on Tue Oct  1 22:03:20 2024
 
 # Variables
 
@@ -19,6 +18,7 @@ LC_ALL = C
 NO_AT_BRIDGE = 1
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
+ 
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # makefile (from 'Makefile', line 6)
@@ -30,13 +30,15 @@ LC_NUMERIC = en_US.UTF-8
 # environment
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
-VSCODE_CWD = /home/artclave/mergerwebserver
+VSCODE_CWD = /home/artclave/Desktop/WebServer
 # environment
 LC_ADDRESS = en_US.UTF-8
 # environment
 LIBVIRT_DEFAULT_URI = qemu:///system
 # default
 MAKE_COMMAND := make
+# environment
+VSCODE_INJECTION = 1
 # environment
 QT_ACCESSIBILITY = 1
 # automatic
@@ -48,13 +50,13 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/artclave/mergerwebserver
+PWD = /home/artclave/Desktop/WebServer
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/home/artclave/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-OLDPWD = /home/artclave
+OLDPWD = /home/artclave/Desktop
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
@@ -71,12 +73,10 @@ XAUTHORITY = /home/artclave/.Xauthority
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
-# environment
-GNOME_TERMINAL_SERVICE = :1.4247
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/artclave/mergerwebserver
+CURDIR := /home/artclave/Desktop/WebServer
 # makefile (from 'Makefile', line 8)
 INC_DIR = src
 # environment
@@ -96,21 +96,25 @@ XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
+GIT_ASKPASS = /usr/share/code/resources/app/extensions/git/dist/askpass.sh
+# environment
+ZDOTDIR = /home/artclave
+# environment
 XDG_SESSION_DESKTOP = ubuntu
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 693560
+VSCODE_PID = 1081717
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_103610_FCgKt7
+KRB5CCNAME = FILE:/tmp/krb5cc_103610_i2D8pf
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/z2t3c1.42bangkok.com:@/tmp/.ICE-unix/690626,unix/z2t3c1.42bangkok.com:/tmp/.ICE-unix/690626
+SESSION_MANAGER = local/z2t3c1.42bangkok.com:@/tmp/.ICE-unix/1078092,unix/z2t3c1.42bangkok.com:/tmp/.ICE-unix/1078092
 # automatic
 *F = $(notdir $*)
 # environment
@@ -136,19 +140,21 @@ XMODIFIERS = @im=ibus
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-SHLVL = 1
-# environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6a641d43_a92f_4ced_bfb1_ae6a14a2eaf3
+SHLVL = 2
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /home/artclave/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH = /home/artclave/bin:/home/artclave/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 # default
 MAKEFILES := 
 # environment
+VSCODE_GIT_IPC_HANDLE = /run/user/103610/vscode-git-7336f9c007.sock
+# environment
 LANGUAGE = en_US:
+# environment
+VSCODE_GIT_ASKPASS_NODE = /usr/share/code/code
 # environment
 LC_MONETARY = en_US.UTF-8
 # automatic
@@ -156,7 +162,11 @@ LC_MONETARY = en_US.UTF-8
 # environment
 LC_TIME = en_US.UTF-8
 # environment
-INVOCATION_ID = e3178a5c1243484492594aa45f701622
+VSCODE_GIT_ASKPASS_MAIN = /usr/share/code/resources/app/extensions/git/dist/askpass-main.js
+# environment
+INVOCATION_ID = 1eaa4ddf2bed4bb0be80c4fcb90a2542
+# environment
+TERM_PROGRAM = vscode
 # environment
 DOCKER_HOST = unix:///run/user/103610/docker.sock
 # environment
@@ -176,17 +186,19 @@ XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
 DESKTOP_SESSION = ubuntu
 # environment
-ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+ORIGINAL_XDG_CURRENT_DESKTOP = Unity
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
 LOGNAME = artclave
 # environment
+USER_ZDOTDIR = /home/artclave
+# environment
 GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 690655
+SYSTEMD_EXEC_PID = 1078119
 # environment
 DISPLAY = :0
 # environment
@@ -196,13 +208,13 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 689823
+MANAGERPID = 1077278
 # environment
 DEBUGINFOD_URLS = https://debuginfod.ubuntu.com 
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 693560
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1081717
 # environment
 _ = /usr/bin/code
 # environment
@@ -214,7 +226,7 @@ GPG_AGENT_INFO = /run/user/103610/gnupg/S.gpg-agent:0:1
 # environment
 COLORTERM = truecolor
 # environment
-JOURNAL_STREAM = 8:5262151
+JOURNAL_STREAM = 8:13314827
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -245,8 +257,6 @@ VSCODE_CLI = 1
 FT_HOOK_NAME = login-user
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-VTE_VERSION = 6800
 # makefile (from 'Makefile', line 3)
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 # environment
@@ -258,21 +268,23 @@ CXX = c++
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
+TERM_PROGRAM_VERSION = 1.92.2
+# environment
 GDMSESSION = ubuntu
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
- 
-# Load=125/1024=12%, Rehash=0, Collisions=13/185=7%
+# Load=131/1024=13%, Rehash=0, Collisions=8/191=4%
 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
+ 
 
 # Directories
 
-# src (device 2064, inode 16807511): 6 files, no impossibilities so far.
-# . (device 2064, inode 11621): 16 files, no impossibilities.
+# src (device 2064, inode 25170020): 6 files, no impossibilities so far.
+# . (device 2064, inode 9029602): 16 files, no impossibilities.
 
 # 22 files, no impossibilities in 2 directories.
 
@@ -353,7 +365,7 @@ obj/server/ServerSocket.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2024-10-01 15:17:10.724213
+#  Last modified 2024-10-01 22:01:01.815058218
 #  File has been updated.
 #  Successfully updated.
 
@@ -366,7 +378,7 @@ obj/server/ServerCore.o:
 # Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2024-10-01 15:15:43.365041462
+#  Last modified 2024-10-01 22:01:01.815058218
 #  File has been updated.
 #  Successfully updated.
 
@@ -474,11 +486,11 @@ obj/response_builder/ResponseBuilder.o:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 .PHONY: all clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 
 # files hash-table stats:
 # Load=27/1024=3%, Rehash=0, Collisions=0/67=0%
@@ -494,6 +506,6 @@ obj/response_builder/ResponseBuilder.o:
 # strcache performance: lookups = 78 / hit rate = 35%
 # hash-table stats:
 # Load=50/8192=1%, Rehash=0, Collisions=0/78=0%
-# Finished Make data base on Tue Oct  1 15:17:17 2024
+# Finished Make data base on Tue Oct  1 22:03:20 2024
 
  
