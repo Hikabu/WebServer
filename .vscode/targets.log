@@ -6,7 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Sep 30 21:35:16 2024
+# Make data base, printed on Tue Oct  1 15:17:17 2024
+ 
 
 # Variables
 
@@ -14,6 +15,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
@@ -27,7 +30,7 @@ LC_NUMERIC = en_US.UTF-8
 # environment
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
-VSCODE_CWD = /home/artclave
+VSCODE_CWD = /home/artclave/mergerwebserver
 # environment
 LC_ADDRESS = en_US.UTF-8
 # environment
@@ -45,7 +48,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/artclave/Desktop/WebServer
+PWD = /home/artclave/mergerwebserver
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -59,7 +62,7 @@ OLDPWD = /home/artclave
 # environment
 VSCODE_CODE_CACHE_PATH = /home/artclave/.config/Code/CachedData/fee1edb8d6d72a0ddff41e5f71a671c23ed924b9
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
 LANG = C
 # environment
@@ -68,16 +71,18 @@ XAUTHORITY = /home/artclave/.Xauthority
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# environment
+GNOME_TERMINAL_SERVICE = :1.4247
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/artclave/Desktop/WebServer
+CURDIR := /home/artclave/mergerwebserver
 # makefile (from 'Makefile', line 8)
 INC_DIR = src
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # makefile (from 'Makefile', line 11)
-SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/config/ConfigParser.cpp $(SRC_DIR)/config/ServerConfig.cpp $(SRC_DIR)/request_parser/HttpRequest.cpp $(SRC_DIR)/request_parser/RequestParser.cpp $(SRC_DIR)/response_builder/ResponseBuilder.cpp $(SRC_DIR)/post_request_body_handling/PostRequestBodySnatcher.cpp $(SRC_DIR)/post_request_body_handling/PostRequestBodyPart.cpp $(SRC_DIR)/response_builder/RequestResponse.cpp $(SRC_DIR)/response_builder/ResponseUtils.cpp $(SRC_DIR)/server/Server.cpp $(SRC_DIR)/server/Client.cpp 
+SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/config/ConfigParser.cpp $(SRC_DIR)/config/ServerConfig.cpp $(SRC_DIR)/request_parser/HttpRequest.cpp $(SRC_DIR)/request_parser/RequestParser.cpp $(SRC_DIR)/response_builder/ResponseBuilder.cpp $(SRC_DIR)/post_request_body_handling/PostRequestBodySnatcher.cpp $(SRC_DIR)/post_request_body_handling/PostRequestBodyPart.cpp $(SRC_DIR)/response_builder/RequestResponse.cpp $(SRC_DIR)/response_builder/ResponseUtils.cpp $(SRC_DIR)/server/ServerCore.cpp $(SRC_DIR)/server/Multiplex.cpp $(SRC_DIR)/server/ServerSocket.cpp $(SRC_DIR)/server/ClientSocket.cpp $(SRC_DIR)/server/Utils.cpp 
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -97,15 +102,15 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 206908
+VSCODE_PID = 693560
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_103610_nbnqyh
+KRB5CCNAME = FILE:/tmp/krb5cc_103610_FCgKt7
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/z2t3c1.42bangkok.com:@/tmp/.ICE-unix/178741,unix/z2t3c1.42bangkok.com:/tmp/.ICE-unix/178741
+SESSION_MANAGER = local/z2t3c1.42bangkok.com:@/tmp/.ICE-unix/690626,unix/z2t3c1.42bangkok.com:/tmp/.ICE-unix/690626
 # automatic
 *F = $(notdir $*)
 # environment
@@ -118,7 +123,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/103610/bus
 VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","locale":"en","availableLanguages":{}}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
-# makefile (from 'Makefile', line 25)
+# makefile (from 'Makefile', line 29)
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 # environment
 GNOME_DESKTOP_SESSION_ID = this-is-deprecated
@@ -133,12 +138,13 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
 SHLVL = 1
 # environment
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6a641d43_a92f_4ced_bfb1_ae6a14a2eaf3
+# environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
 PATH = /home/artclave/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
- 
 # default
 MAKEFILES := 
 # environment
@@ -150,14 +156,14 @@ LC_MONETARY = en_US.UTF-8
 # environment
 LC_TIME = en_US.UTF-8
 # environment
-INVOCATION_ID = 4dc6dfdbebb34ca2991554f4a64e8552
+INVOCATION_ID = e3178a5c1243484492594aa45f701622
 # environment
 DOCKER_HOST = unix:///run/user/103610/docker.sock
 # environment
 LC_TELEPHONE = en_US.UTF-8
 # automatic
 ?F = $(notdir $?)
-# makefile (from 'Makefile', line 28)
+# makefile (from 'Makefile', line 32)
 NAME = webserv
 # environment
 GTK_IM_MODULE = ibus
@@ -180,7 +186,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 178769
+SYSTEMD_EXEC_PID = 690655
 # environment
 DISPLAY = :0
 # environment
@@ -190,15 +196,15 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 177939
+MANAGERPID = 689823
 # environment
 DEBUGINFOD_URLS = https://debuginfod.ubuntu.com 
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 206908
+GIO_LAUNCHED_DESKTOP_FILE_PID = 693560
 # environment
-_ = /usr/share/code/code
+_ = /usr/bin/code
 # environment
 LC_PAPER = en_US.UTF-8
 # environment
@@ -206,7 +212,9 @@ XDG_RUNTIME_DIR = /run/user/103610
 # environment
 GPG_AGENT_INFO = /run/user/103610/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:887707
+COLORTERM = truecolor
+# environment
+JOURNAL_STREAM = 8:5262151
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -220,6 +228,8 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 VSCODE_IPC_HOOK = /run/user/103610/vscode-e449c818-1.92-main.sock
 # environment
+TERM = xterm-256color
+# environment
 FT_HOOK_PATHNAME = login-user.d
 # environment
 IM_CONFIG_PHASE = 1
@@ -230,7 +240,13 @@ IM_CONFIG_PHASE = 1
 # default
 SUFFIXES := 
 # environment
+VSCODE_CLI = 1
+# environment
 FT_HOOK_NAME = login-user
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VTE_VERSION = 6800
 # makefile (from 'Makefile', line 3)
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 # environment
@@ -246,7 +262,8 @@ GDMSESSION = ubuntu
 # environment
 LC_IDENTIFICATION = en_US.UTF-8
 # variable set hash-table stats:
-# Load=117/1024=11%, Rehash=0, Collisions=5/174=3%
+ 
+# Load=125/1024=12%, Rehash=0, Collisions=13/185=7%
 
 # Pattern-specific Variable Values
 
@@ -254,15 +271,15 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# src (device 2064, inode 12639389): 6 files, no impossibilities so far.
-# . (device 2064, inode 4439321): 18 files, no impossibilities.
+# src (device 2064, inode 16807511): 6 files, no impossibilities so far.
+# . (device 2064, inode 11621): 16 files, no impossibilities.
 
-# 24 files, no impossibilities in 2 directories.
+# 22 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
 obj/%.o: src/%.cpp
-#  recipe to execute (from 'Makefile', line 37):
+#  recipe to execute (from 'Makefile', line 41):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
@@ -283,6 +300,18 @@ obj/request_parser/RequestParser.o:
 
 # Not a target:
 obj/response_builder/RequestResponse.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/server/Multiplex.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+obj/server/ClientSocket.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -311,30 +340,48 @@ obj/main.o: src/main.cpp
 # | := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/18=6%
-#  recipe to execute (from 'Makefile', line 37):
+#  recipe to execute (from 'Makefile', line 41):
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 # Not a target:
+obj/server/ServerSocket.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-30 21:35:13.784207642
+#  Last modified 2024-10-01 15:17:10.724213
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
+obj/server/ServerCore.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 src/main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2024-09-30 21:08:23.105588787
+#  Last modified 2024-10-01 15:15:43.365041462
 #  File has been updated.
 #  Successfully updated.
+
+# Not a target:
+obj/server/Utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 41):
+#  recipe to execute (from 'Makefile', line 45):
 	rm -rf $(OBJ_DIR)
 
 # Not a target:
@@ -343,16 +390,15 @@ obj/post_request_body_handling/PostRequestBodyPart.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-webserv: obj/main.o obj/config/ConfigParser.o obj/config/ServerConfig.o obj/request_parser/HttpRequest.o obj/request_parser/RequestParser.o obj/response_builder/ResponseBuilder.o obj/post_request_body_handling/PostRequestBodySnatcher.o obj/post_request_body_handling/PostRequestBodyPart.o obj/response_builder/RequestResponse.o obj/response_builder/ResponseUtils.o obj/server/Server.o obj/server/Client.o
+webserv: obj/main.o obj/config/ConfigParser.o obj/config/ServerConfig.o obj/request_parser/HttpRequest.o obj/request_parser/RequestParser.o obj/response_builder/ResponseBuilder.o obj/post_request_body_handling/PostRequestBodySnatcher.o obj/post_request_body_handling/PostRequestBodyPart.o obj/response_builder/RequestResponse.o obj/response_builder/ResponseUtils.o obj/server/ServerCore.o obj/server/Multiplex.o obj/server/ServerSocket.o obj/server/ClientSocket.o obj/server/Utils.o
 #  Implicit rule search has not been done.
-#  Last modified 2024-09-30 21:01:53.733922901
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/7=0%
-#  recipe to execute (from 'Makefile', line 34):
+#  recipe to execute (from 'Makefile', line 38):
 	$(CXX) $(CXXFLAGS) $^ -o $@
- 
 
 re: fclean all
 #  Phony target (prerequisite of .PHONY).
@@ -362,12 +408,6 @@ re: fclean all
 
 # Not a target:
 .DEFAULT:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-obj/server/Client.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -382,32 +422,26 @@ all: webserv
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/7=0%
 
-# Not a target:
-obj/server/Server.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 44):
+#  recipe to execute (from 'Makefile', line 48):
 	rm -f $(NAME)
 
 run: all
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 49):
+#  recipe to execute (from 'Makefile', line 53):
 	./$(NAME) conf/default.conf
 
 file: all
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 52):
+#  recipe to execute (from 'Makefile', line 56):
 	./$(NAME) conf/default.conf > output.txt
 
 # Not a target:
@@ -440,25 +474,26 @@ obj/response_builder/ResponseBuilder.o:
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 .PHONY: all clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=24/1024=2%, Rehash=0, Collisions=3/61=5%
+# Load=27/1024=3%, Rehash=0, Collisions=0/67=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 48 / storage = 727 B / avg = 15 B
-# current buf: size = 8162 B / used = 727 B / count = 48 / avg = 15 B
+# strcache buffers: 1 (0) / strings = 50 / storage = 801 B / avg = 16 B
+# current buf: size = 8162 B / used = 801 B / count = 50 / avg = 16 B
 
-# strcache performance: lookups = 77 / hit rate = 37%
+# strcache performance: lookups = 78 / hit rate = 35%
 # hash-table stats:
-# Load=48/8192=1%, Rehash=0, Collisions=4/77=5%
-# Finished Make data base on Mon Sep 30 21:35:16 2024
+# Load=50/8192=1%, Rehash=0, Collisions=0/78=0%
+# Finished Make data base on Tue Oct  1 15:17:17 2024
 
  
