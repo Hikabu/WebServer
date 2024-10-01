@@ -61,8 +61,9 @@ void Response::generateErrorsPage(int code) {
             break;
         }
     }
-	std::stringstream ss;
-    response = "HTTP/1.1 " + std::atoi(code.c_str()) + " " + errorStatus + "\n";
+    std::ostringstream oss;
+    oss << code;
+    std::string response = "HTTP/1.1 " + oss.str() + " " + errorStatus + "\n";
     response += "Content-Type: text/html\n\n";
     std::string line;
     std::ifstream file((errorPagePath + errorPageName).c_str(), std::ios::in | std::ios::binary);
@@ -248,7 +249,9 @@ void Response::handleGet(Request &request) {
             response += "Content-Type: image/svg+xml";
         else
             response += "Content-Type: image/" + url.substr(url.find(".") + 1);
-        response += "\nContent-Length: " + std::atoi(len.c_str()) + "\n\n";
+        std::ostringstream oss;
+        oss << len;
+        response += "\nContent-Length: " + oss.str() + "\n\n";
         std::string line;
         line.resize(len);
         file.read(&line[0], len);
@@ -304,7 +307,9 @@ void Response::handleRequest(Request &request) {
         std::vector<BYTE> vector = base64_decode(formData);
 
         //write data to file
-        destFile.open("www/upload/" + fileName, std::ios::binary | std::ios::app);
+        std::string fullPath = "www/upload/" + fileName;
+        destFile.open(fullPath.c_str(), std::ios::binary | std::ios::app);
+        // destFile.open("www/upload/" + fileName, std::ios::binary | std::ios::app);
         if (!destFile.is_open()) {
             std::cout << "Error open file" << std::endl;
             return;
