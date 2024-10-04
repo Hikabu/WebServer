@@ -1,0 +1,39 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/artclave/Desktop/WebServer'
+mkdir -p obj
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/main.cpp -o obj/main.o
+mkdir -p obj/config
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/config/ConfigParser.cpp -o obj/config/ConfigParser.o
+mkdir -p obj/config
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/config/ServerConfig.cpp -o obj/config/ServerConfig.o
+mkdir -p obj/request_parser
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/request_parser/HttpRequest.cpp -o obj/request_parser/HttpRequest.o
+mkdir -p obj/request_parser
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/request_parser/RequestParser.cpp -o obj/request_parser/RequestParser.o
+mkdir -p obj/response_builder
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/response_builder/ResponseBuilder.cpp -o obj/response_builder/ResponseBuilder.o
+mkdir -p obj/post_request_body_handling
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/post_request_body_handling/PostRequestBodySnatcher.cpp -o obj/post_request_body_handling/PostRequestBodySnatcher.o
+mkdir -p obj/post_request_body_handling
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/post_request_body_handling/PostRequestBodyPart.cpp -o obj/post_request_body_handling/PostRequestBodyPart.o
+mkdir -p obj/response_builder
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/response_builder/RequestResponse.cpp -o obj/response_builder/RequestResponse.o
+mkdir -p obj/response_builder
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/response_builder/ResponseUtils.cpp -o obj/response_builder/ResponseUtils.o
+mkdir -p obj/server
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/server/ServerCore.cpp -o obj/server/ServerCore.o
+mkdir -p obj/server
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/server/Multiplex.cpp -o obj/server/Multiplex.o
+mkdir -p obj/server
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/server/ServerSocket.cpp -o obj/server/ServerSocket.o
+mkdir -p obj/server
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/server/ClientSocket.cpp -o obj/server/ClientSocket.o
+mkdir -p obj/server
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/server/Utils.cpp -o obj/server/Utils.o
+mkdir -p obj/server
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/server/Cgi.cpp -o obj/server/Cgi.o
+mkdir -p obj/server
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP -Isrc -c src/server/Files.cpp -o obj/server/Files.o
+c++ -Wall -Wextra -Werror -std=c++98 -MMD -MP obj/main.o obj/config/ConfigParser.o obj/config/ServerConfig.o obj/request_parser/HttpRequest.o obj/request_parser/RequestParser.o obj/response_builder/ResponseBuilder.o obj/post_request_body_handling/PostRequestBodySnatcher.o obj/post_request_body_handling/PostRequestBodyPart.o obj/response_builder/RequestResponse.o obj/response_builder/ResponseUtils.o obj/server/ServerCore.o obj/server/Multiplex.o obj/server/ServerSocket.o obj/server/ClientSocket.o obj/server/Utils.o obj/server/Cgi.o obj/server/Files.o -o webserv
+make: Leaving directory '/home/artclave/Desktop/WebServer'
+ 
