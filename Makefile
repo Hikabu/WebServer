@@ -6,6 +6,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 SRC_DIR = src
 OBJ_DIR = obj
 INC_DIR = src
+RM		= rm -f
 
 # Source files
 SRCS = $(SRC_DIR)/main.cpp \
@@ -29,12 +30,19 @@ SRCS = $(SRC_DIR)/main.cpp \
 # Object files
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
+# depend files
+DEPS = $(OBJS:%.o=%.d)
 # Dependency generation
-%.d: %.cpp
-            @set -e; $(RM) $@; \ #exit if command fails
-            $(CC) -Isrcs -M $(CPPFLAGS) $< > $@.$$$$; \ #gen dependen
-            sed 's,\($\)\.o[ :],\1.o $@ : ,g' < $@.$$$$ > $@; \ #depend files to include .d file itself as a target
-            $(RM) $@.$$$$ # tmp files 
+#exit if command fails
+#gen dependen
+#depend files to include .d file itself as a target
+#tmp files 
+$(OBJ_DIR)/%.d: $(SRC_DIR)/%.cpp
+	@mkdir -p $(@D)
+	@set -e; $(RM) $@; \
+	$(CXX) -Isrcs -M $(CXXFLAGS) $< > $@.$$$$; \
+	sed 's,\($\)\.o[ :],\1.o $@ : ,g' < $@.$$$$ > $@; \
+	$(RM) $@.$$$$
 
 # Executable name
 NAME = webserv
@@ -43,19 +51,22 @@ NAME = webserv
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $^ -o $@
+	$(CXX) $(CXXFLAGS) $^ -o $@ 
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(@D)
 	$(CXX) $(CXXFLAGS) -I$(INC_DIR) -c $< -o $@
 
 clean:
-	rm -rf $(OBJ_DIR)
+	rm -rf $(OBJ_DIR) $(DEPS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+# Include generated dependencies
+-include $(DEPS)
 
 run: all
 	./$(NAME) conf/default.conf
