@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   includes.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:08:02 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/28 12:35:21 by artclave         ###   ########.fr       */
+/*   Updated: 2024/10/05 16:22:51 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,23 @@
 #include <signal.h>
 #include <sys/wait.h>
 #include <csignal>
+#include <ctime> // Import the ctime library
 
-# define READ_BUFFER_SIZE 1024
-# define WRITE_BUFFER_SIZE 1024
 
-extern int		server_running;
+# define READ_BUFFER_SIZE 100
+# define WRITE_BUFFER_SIZE 100
+# define MAX_TIME_CGI	20 //should be 20 or 30please update!
 
-void	signalHandler(int signal);
+enum connection_states
+{
+	READING,
+	HTTP,
+	CGI,
+	FILES,
+	WRITE,
+	DISCONNECT,
+};
+
+
 
 #endif

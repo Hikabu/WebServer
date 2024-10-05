@@ -6,14 +6,14 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:11:38 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/28 11:48:36 by artclave         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:51:31 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HTTPREQUEST_HPP
 #define HTTPREQUEST_HPP
 
-#include "includes.hpp"
+#include "../includes.hpp"
 
 class HttpRequest {
 public:
@@ -27,8 +27,10 @@ public:
     std::string getProtocol() const;
     std::string getBody() const;
     std::string getHeader(const std::string& key) const;
-	std::string getHost() const; //for network version 1
+	std::string getHost() const; 
     const std::map<std::string, std::string>& getHeaders() const;
+	std::string	&getLastFileContent();
+	int			getLastFileFd();
 	std::string getCgiPath() const; 
 	int getPostFileFd() const;
 	std::string &getPostFileContent();
@@ -38,19 +40,26 @@ public:
     void setProtocol(const std::string& protocol);
     void setBody(const std::string& body);
     void addHeader(const std::string& key, const std::string& value);
-	void setHost(const std::string & host); //for network version 1
+	void setHost(const std::string & host);
 	void setCgiPath(const std::string &path);
     bool hasHeader(const std::string& key) const;
     void printHeaders() const;
-	void setPostFileContent(const std::string & content);
-	void setPostFileFd(int fd);
+
+	void	popBackPostFileContents();
+	void	popBackPostFileFds();
+
+	bool	hasPostFileFds();
+	bool	hasPostFileContents();
+
 private:
     std::string method_;
     std::string path_;
     std::string protocol_;
     std::map<std::string, std::string> headers_;
     std::string body_;
-	std::string host_; //for network version 1
+	std::string host_;
+	std::vector<std::string> postFileContents_;
+	std::vector<int> postFileFds_;
 	std::string		cgiPath_;
 	std::string postFileContent;
 	int postFileFd;

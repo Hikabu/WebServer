@@ -6,14 +6,14 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 13:38:57 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/12 11:05:47 by artclave         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:51:31 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERVER_CONFIG_HPP
 #define SERVER_CONFIG_HPP
 
-#include "includes.hpp"
+#include "../includes.hpp"
 
 struct LocationConfig {
     std::string path;
@@ -38,9 +38,7 @@ public:
     ServerConfig& operator=(const ServerConfig& other);
     ~ServerConfig();
 
-    //int getPort() const;
-   // std::string getHost() const;
-	const std::string& getListen() const;  //for network version 1  
+	const std::string& getListen() const; 
     const std::vector<std::string>& getServerNames() const;
     const std::map<std::string, std::string>& getErrorPages() const;
     size_t getClientMaxBodySize() const;
@@ -52,9 +50,7 @@ public:
 	int getListenSocket() const;
 	const struct sockaddr_in& getAddress() const;
 	
-   // void setPort(int value);
-   // void setHost(const std::string& value);
-	void setListen(const std::string& value);  //for network version 1 
+	void setListen(const std::string& value); 
     void setServerNames(const std::vector<std::string>& value);
     void setErrorPages(const std::map<std::string, std::string>& value);
     void setClientMaxBodySize(size_t value);
@@ -67,9 +63,7 @@ public:
 	void print() const;	
 
 private:
-  //  int port;
-   // std::string host;
-	std::string listen; //for network version 1
+	std::string listen; 
 	std::vector<std::string> serverNames;
     std::map<std::string, std::string> errorPages;
     size_t clientMaxBodySize;
@@ -77,8 +71,10 @@ private:
     std::string index;
     std::vector<LocationConfig> locations;
     CGIConfig cgi;
-	int listen_socket; //why ?
-	struct sockaddr_in address;	//why ?
+	int listen_socket;
+	struct sockaddr_in address;
 };
 
+typedef std::vector<ServerConfig> Configs;
+typedef std::map<std::string, std::vector<ServerConfig>	> HostPortConfigMap;
 #endif
