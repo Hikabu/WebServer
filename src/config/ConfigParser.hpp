@@ -15,7 +15,6 @@
 
 #include "../includes.hpp"
 #include "ServerConfig.hpp"
-
 class ConfigParser {
 public:
     static std::vector<ServerConfig> parse(const std::string& configFile);
