@@ -6,7 +6,7 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 13:20:53 by artclave          #+#    #+#             */
-/*   Updated: 2024/10/05 16:21:54 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/10/05 16:28:09 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
