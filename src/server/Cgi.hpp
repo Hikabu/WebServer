@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Cgi.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/04 04:41:36 by artclave          #+#    #+#             */
-/*   Updated: 2024/10/04 07:19:35 by artclave         ###   ########.fr       */
+/*   Updated: 2024/10/05 16:21:31 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CGI_HPP 
+#ifndef CGI_HPP
 # define CGI_HPP 
 
 #include "includes.hpp"

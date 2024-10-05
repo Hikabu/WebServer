@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PostRequestBodySnatcher.hpp                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bperez-a <bperez-a@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 22:14:07 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/12 22:27:15 by bperez-a         ###   ########.fr       */
+/*   Updated: 2024/10/05 16:22:22 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

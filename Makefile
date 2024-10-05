@@ -29,6 +29,13 @@ SRCS = $(SRC_DIR)/main.cpp \
 # Object files
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
+# Dependency generation
+%.d: %.cpp
+            @set -e; $(RM) $@; \ #exit if command fails
+            $(CC) -Isrcs -M $(CPPFLAGS) $< > $@.$$$$; \ #gen dependen
+            sed 's,\($\)\.o[ :],\1.o $@ : ,g' < $@.$$$$ > $@; \ #depend files to include .d file itself as a target
+            $(RM) $@.$$$$ # tmp files 
+
 # Executable name
 NAME = webserv
 

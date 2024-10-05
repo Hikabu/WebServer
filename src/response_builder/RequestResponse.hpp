@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RequestResponse.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 10:16:00 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/10/02 23:00:44 by artclave         ###   ########.fr       */
+/*   Updated: 2024/10/05 16:22:34 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
