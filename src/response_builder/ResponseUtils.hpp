@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ResponseUtils.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
+/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 09:40:51 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/10/05 16:22:44 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/10/05 17:51:31 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RESPONSE_UTILS_HPP
 #define RESPONSE_UTILS_HPP
 
-#include "includes.hpp"
+#include "../includes.hpp"
 #include "RequestResponse.hpp"
 #include "../request_parser/HttpRequest.hpp"
 #include "../config/ServerConfig.hpp"

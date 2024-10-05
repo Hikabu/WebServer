@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
+/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:30:45 by artclave          #+#    #+#             */
-/*   Updated: 2024/10/05 16:34:37 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/10/05 17:52:42 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef UTILS_HPP
 #define UTILS_HPP
-#include "includes.hpp"
-#include "config/ServerConfig.hpp"
+#include "../includes.hpp"
+#include "../config/ServerConfig.hpp"
 class	Utils
 {
 	public:

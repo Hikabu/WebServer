@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ConfigParser.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
+/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:06:17 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/10/05 16:22:01 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/10/05 17:56:55 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
