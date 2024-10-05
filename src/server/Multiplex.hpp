@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Multiplex.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 07:06:04 by artclave          #+#    #+#             */
-/*   Updated: 2024/10/02 20:02:04 by artclave         ###   ########.fr       */
+/*   Updated: 2024/10/05 16:21:41 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
