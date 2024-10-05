@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #ifndef CGI_HPP
-# define CGI_HPP 
+# define CGI_HPP
 
 #include "../includes.hpp"
 class ClientSocket;

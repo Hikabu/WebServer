@@ -42,9 +42,13 @@ public:
     void addHeader(const std::string& key, const std::string& value);
 	void setHost(const std::string & host);
 	void setCgiPath(const std::string &path);
+	void addPostFileContent(const std::string & content);
+	void addPostFileFd(int fd);
     bool hasHeader(const std::string& key) const;
     void printHeaders() const;
 
+    void setPostFileContent(const std::string &content);
+    void setPostFileFd(int fd);
 	void	popBackPostFileContents();
 	void	popBackPostFileFds();
 

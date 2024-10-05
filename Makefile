@@ -32,16 +32,12 @@ OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(OBJ_DIR)/%.o)
 
 # depend files
 DEPS = $(OBJS:%.o=%.d)
-# Dependency generation
-#exit if command fails
-#gen dependen
-#depend files to include .d file itself as a target
-#tmp files 
+
 $(OBJ_DIR)/%.d: $(SRC_DIR)/%.cpp
 	@mkdir -p $(@D)
 	@set -e; $(RM) $@; \
 	$(CXX) -Isrcs -M $(CXXFLAGS) $< > $@.$$$$; \
-	sed 's,\($\)\.o[ :],\1.o $@ : ,g' < $@.$$$$ > $@; \
+	sed 's,\($*\)\.o[ :]*,$(OBJ_DIR)/\1.o $@ : ,g' < $@.$$$$ > $@; \
 	$(RM) $@.$$$$
 
 # Executable name
