@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   RequestResponse.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
+/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 10:16:00 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/10/05 16:22:34 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/10/05 17:51:31 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef REQUEST_RESPONSE_HPP
 #define REQUEST_RESPONSE_HPP
 
-#include "includes.hpp"
+#include "../includes.hpp"
 #include "../config/ServerConfig.hpp"
 
 

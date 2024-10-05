@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PostRequestBodySnatcher.hpp                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
+/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 22:14:07 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/10/05 16:22:22 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/10/05 17:51:31 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define POST_REQUEST_BODY_SNATCHER_HPP
 
 #include "PostRequestBodyPart.hpp"
-#include "includes.hpp"
+#include "../includes.hpp"
 
 class PostRequestBodySnatcher {
 private:

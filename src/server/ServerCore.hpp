@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ServerCore.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
+/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 16:33:26 by artclave          #+#    #+#             */
-/*   Updated: 2024/10/05 16:21:49 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/10/05 17:56:10 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERVERCORE_HPP
 #define SERVERCORE_HPP
 
-#include "includes.hpp"
-#include "config/ConfigParser.hpp"
-#include "config/ServerConfig.hpp"
-#include "request_parser/HttpRequest.hpp"
-#include "request_parser/RequestParser.hpp"
-#include "response_builder/ResponseBuilder.hpp"
+#include "../includes.hpp"
+#include "../config/ConfigParser.hpp"
+#include "../config/ServerConfig.hpp"
+#include "../request_parser/HttpRequest.hpp"
+#include "../request_parser/RequestParser.hpp"
+#include "../response_builder/ResponseBuilder.hpp"
 
 #include "Multiplex.hpp"
 #include "ServerSocket.hpp"

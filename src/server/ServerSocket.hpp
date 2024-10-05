@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ServerSocket.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
+/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 13:20:53 by artclave          #+#    #+#             */
-/*   Updated: 2024/10/05 16:28:09 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/10/05 17:51:31 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERVERSOCKET_HPP
 # define SERVERSOCKET_HPP
 
-#include "includes.hpp"
+#include "../includes.hpp"
 #include "ClientSocket.hpp"
 
 class ServerSocket
