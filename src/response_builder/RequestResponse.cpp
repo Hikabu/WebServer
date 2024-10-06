@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RequestResponse.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
+/*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 10:17:15 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/28 11:45:10 by artclave         ###   ########.fr       */
+/*   Updated: 2024/10/05 16:22:31 by valeriafedo      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void RequestResponse::setContentLength(size_t contentLength) { this->contentLeng
 void RequestResponse::setContentDisposition(const std::string& contentDisposition) { this->contentDisposition = contentDisposition; }
 void RequestResponse::setFilePathForBody(const std::string& file_path_for_body) { this->file_path_for_body = file_path_for_body; }
 void RequestResponse::setCgiPath(const std::string& cgiPath) {this->cgi_path = cgiPath;}
+	
+
 std::string RequestResponse::toString() const {
 	
 	std::string response;
@@ -63,14 +65,21 @@ void RequestResponse::setContentLengthFromPath(const std::string& path) {
 	}
 }
 
-bool RequestResponse::buildBodyFromFile(const ServerConfig& config, int file_fd) {
+bool RequestResponse::buildBodyFromFile(const ServerConfig& config, int file_fd, int *state) {
 	(void)config;
 	std::string	buff(READ_BUFFER_SIZE, 0);
 	int bytes = read(file_fd, &buff[0], READ_BUFFER_SIZE);
 	for (int i = 0; i < bytes; i++)
 		this->body += buff[i];
-//	if (bytes < 0)
-//		what to do heere?
+	if (bytes == 0)
+	{
+		*state = DISCONNECT;
+		return false;
+	}
+	if (bytes == -1)
+	{
+		return false;//need to check what to do nxt (erno)
+	}
 	if (bytes < READ_BUFFER_SIZE)
 	{
 		//READING COMPLETE
