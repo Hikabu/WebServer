@@ -23,7 +23,9 @@ Server::Server(std::vector<ServerConfig>& config) : config(config){
 	int i = 0;
 	for (std::map<std::string, std::vector<ServerConfig> >::iterator it = combos.begin(); it != combos.end(); it++)
 	{
-		new_server[i].port = extract_port(it->first);
+		// if (extract_port(it->first))
+			new_server[i].port = extract_port(it->first);
+		// else (new_server[i].port = '80');//to defoult 
 		new_server[i].host = extract_host(it->first);
 		new_server[i].possible_configs = it->second;
 		serverList.push_back(new_server[i]);//add server struct to vector of servers...

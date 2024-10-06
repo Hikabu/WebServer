@@ -33,16 +33,16 @@ void	ServerCore::set_up_server_sockets(HostPortConfigMap combos)
 {
 	for (HostPortConfigMap::iterator it = combos.begin(); it != combos.end(); it++)
 	{
-		try
-		{
+		// try we handling all errors in functions and in main
+		// {
 			ServerSocket new_server(it, &multiplex);
 			new_server.start_listening();
 			serverList.push_back(new_server);
-		}
-		catch (char *mssg)
-		{
-			std::cerr<<mssg<<"\n";
-		}
+		// }
+		// catch (char *mssg)
+		// {
+		// 	std::cerr<<mssg<<"\n";
+		// }
 	}
 	if (static_cast<int>(serverList.size()) == 0)
 	{
@@ -53,7 +53,7 @@ void	ServerCore::set_up_server_sockets(HostPortConfigMap combos)
 
 
 void	ServerCore::run(){
-	signal(SIGPIPE, SIG_IGN);
+	// signal(SIGPIPE, SIG_IGN);
 	set_up_server_sockets(unique_host_port_configs());
 	while (true)
 	{

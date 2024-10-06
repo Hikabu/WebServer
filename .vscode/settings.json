@@ -80,6 +80,7 @@
 		"print": "cpp",
 		"queue": "cpp",
 		"stack": "cpp",
-		"variant": "cpp"
+		"variant": "cpp",
+		"csignal": "cpp"
 	}
 }
