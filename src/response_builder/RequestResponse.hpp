@@ -6,14 +6,14 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 10:16:00 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/09/28 11:44:21 by artclave         ###   ########.fr       */
+/*   Updated: 2024/10/05 17:51:31 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef REQUEST_RESPONSE_HPP
 #define REQUEST_RESPONSE_HPP
 
-#include "includes.hpp"
+#include "../includes.hpp"
 #include "../config/ServerConfig.hpp"
 
 
@@ -42,7 +42,9 @@ public:
 	void setFilePathForBody(const std::string& file_path_for_body);
 	void setContentLengthFromPath(const std::string& path);
 	void setCgiPath(const std::string& cgiPath);
-	bool buildBodyFromFile(const ServerConfig& config, int file_fd);
+	
+
+	bool buildBodyFromFile(const ServerConfig& config, int file_fd, int *state);
     std::string toString() const;
 
 private:
@@ -53,6 +55,7 @@ private:
 	std::string contentType;
 	std::string contentDisposition;
 	size_t contentLength;
+
 	std::string cgi_path;
 
 };

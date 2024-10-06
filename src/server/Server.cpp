@@ -6,7 +6,7 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 16:31:54 by artclave          #+#    #+#             */
-/*   Updated: 2024/09/28 12:28:48 by artclave         ###   ########.fr       */
+/*   Updated: 2024/09/28 16:37:09 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ Server::Server(std::vector<ServerConfig>& config) : config(config){
 	int i = 0;
 	for (std::map<std::string, std::vector<ServerConfig> >::iterator it = combos.begin(); it != combos.end(); it++)
 	{
-		new_server[i].port = extract_port(it->first);
+		// if (extract_port(it->first))
+			new_server[i].port = extract_port(it->first);
+		// else (new_server[i].port = '80');//to defoult 
 		new_server[i].host = extract_host(it->first);
 		new_server[i].possible_configs = it->second;
 		serverList.push_back(new_server[i]);//add server struct to vector of servers...
@@ -48,11 +50,17 @@ int	Server::server_socket_error(std::string type, int *i){
 int	Server::server_sockets_for_listening(){
 	int opt = 1;
 	struct sockaddr_in address_ipv4;
+	int	flags;
 	for (int i = 0; i < static_cast<int>(serverList.size()); i++)
-	{
-		serverList[i].fd = socket(AF_INET, SOCK_STREAM | O_NONBLOCK, 0); //created socket fd, NON-BLOCKING flag
+	{	
+		serverList[i].fd = socket(AF_INET, SOCK_STREAM, 0); //created socket fd, NON-BLOCKING flag
 		if (serverList[i].fd == -1)
 			return (server_socket_error("Socket", &i));
+		flags = fcntl(serverList[i].fd, F_GETFL, 0);
+		if (flags == -1)
+			return (server_socket_error("fcntl F_GETFL", &i));
+		if (fcntl(serverList[i].fd, F_SETFL, flags | O_NONBLOCK) == -1)
+			return (server_socket_error("fcntl F_SETFL", &i));
 		setsockopt(serverList[i].fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));//We can bind to an address that is already bound. Without SO_REUSEADDR, server can fail to bind if the socket it is still held by the prev server run. 
 		memset(&address_ipv4, 0, sizeof(address_ipv4));
 		address_ipv4.sin_family = AF_INET;//family AF_INET for ipv4
