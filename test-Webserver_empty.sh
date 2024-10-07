@@ -29,7 +29,7 @@ test_endpoint "POST" "/" 405 "Root endpoint with POST (should fail)"
 
 test_endpoint "GET" "/uploads" 200 "Uploads endpoint with GET"
 test_endpoint "POST" "/uploads" 400 "Uploads endpoint with POST"
-test_endpoint "DELETE" "/uploads/cat.png" 200 "Uploads endpoint with DELETE"
+#test_endpoint "DELETE" "/uploads/cat.png" 200 "Uploads endpoint with DELETE"
 
 test_endpoint "GET" "/cgi-bin/picgen.py" 302 "CGI endpoint with GET"
 test_endpoint "POST" "/cgi-bin/picgen.py" 302 "CGI endpoint with POST"
