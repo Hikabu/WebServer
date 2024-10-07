@@ -6,7 +6,7 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:31:51 by artclave          #+#    #+#             */
-/*   Updated: 2024/10/05 16:21:57 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/10/07 07:40:47 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,13 @@
 
 int	Utils::extract_port(const std::string &str){
 	std::string::const_iterator semi_colon = std::find(str.begin(), str.end(), ':');
+	if (semi_colon == str.end())
+		return 8080;
 	int pos = std::distance(str.begin(), semi_colon);
-	return (std::atoi(str.substr(pos + 1).c_str()));
+	std::string	port_string = str.substr(pos + 1);
+	if (port_string.empty())
+		return 8080;
+	return (std::atoi(port_string.c_str()));
 }
 
 uint32_t	Utils::extract_host(const std::string &str){
@@ -57,4 +62,44 @@ bool	Utils::is_found(std::size_t &result, std::string needle, std::string &hayst
 bool	Utils::is_found(std::string needle, std::string &haystack)
 {
 	return (haystack.find(needle) != std::string::npos);
+}
+
+bool	Utils::error(std::string mssg, int should_exit)
+{
+	std::cerr<<mssg<<"\n";
+	if (should_exit == EXIT)
+		exit(1);
+	return false;
+}
+
+bool	Utils::read_write_error(int bytes, int *state)
+{
+	if (bytes == 0)
+	{
+		*state = DISCONNECT;
+		return true;
+	}
+	if (bytes == -1)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool	Utils::complete_http_message(std::string &buffer)
+{
+	std::size_t	header, content_length;
+	if (!Utils::is_found(header, "\r\n\r\n", buffer))
+		return false;
+	if (Utils::is_found(content_length, "Content-Length:", buffer))
+	{
+		long expected_body_size = std::atol(buffer.substr(content_length + 16, header).c_str());
+		long current_body_size = static_cast<int>(buffer.size() - header - 4);
+		if (current_body_size < expected_body_size)
+			return false;
+	}
+	else if (Utils::is_found("Transfer-Encoding: chunked", buffer) \
+			&& !Utils::is_found("0\r\n\r\n", buffer))
+		return false;
+	return true;
 }

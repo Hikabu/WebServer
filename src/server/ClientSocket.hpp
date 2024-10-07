@@ -6,14 +6,13 @@
 /*   By: artclave <artclave@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 21:35:37 by artclave          #+#    #+#             */
-/*   Updated: 2024/10/05 17:54:11 by artclave         ###   ########.fr       */
+/*   Updated: 2024/10/07 07:26:50 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLIENTSOCKET_HPP
 #define CLIENTSOCKET_HPP
 
-#include "../includes.hpp"
 #include "../includes.hpp"
 #include "../config/ConfigParser.hpp"
 #include "../config/ServerConfig.hpp"
@@ -45,7 +44,6 @@ class	ClientSocket{
 		int				write_offset;
 		
 		Cgi				cgi;
-		//File			file;
 		
 		void	read_request();
 		void	init_http_process(Configs &possible_configs);

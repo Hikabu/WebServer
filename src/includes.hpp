@@ -6,7 +6,7 @@
 /*   By: valeriafedorova <valeriafedorova@studen    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 20:08:02 by bperez-a          #+#    #+#             */
-/*   Updated: 2024/10/05 16:22:51 by valeriafedo      ###   ########.fr       */
+/*   Updated: 2024/10/07 07:36:30 by artclave         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,8 @@
 #include <ctime> // Import the ctime library
 
 
-# define READ_BUFFER_SIZE 100
-# define WRITE_BUFFER_SIZE 100
-# define MAX_TIME_CGI	20 //should be 20 or 30please update!
+# define MAX_BUFFER_SIZE 100
+# define MAX_TIME_CGI	10 //should be 10-30 please update!
 
 enum connection_states
 {
@@ -56,6 +55,8 @@ enum connection_states
 	DISCONNECT,
 };
 
+# define EXIT 0 
+# define DONT_EXIT 1
 
 
 #endif
