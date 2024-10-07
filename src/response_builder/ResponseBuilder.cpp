@@ -227,26 +227,36 @@ RequestResponse ResponseBuilder::buildAutoindexResponse(ServerConfig& config, Ht
 RequestResponse ResponseBuilder::buildPostResponse(ServerConfig& config, HttpRequest& request, LocationConfig& location) {
     RequestResponse response;
 
+	std::cout << "works\n";
     // Check if method is allowed
     if (ResponseUtils::isMethodAllowed(request, location) == false) {
         response = buildErrorResponse(config, request, "405", "Method Not Allowed");
+		std::cout << "in response\n";
         return response;
     }
-    
+    if ((request.getBody().empty())){
+		response = buildErrorResponse(config, request, "400", "Bad request");
+		return response;
+	}
     // Check if the target location exists and is writable
     std::string path = location.root + request.getPath();
     if (access(path.c_str(), W_OK) == -1) {
         response = buildErrorResponse(config, request, "403", "Forbidden");
-        return response;
+        std::cout << "in access\n";
+		return response;
     }
+	std::cout << "not in the if\n";
 
     // Process the POST data (e.g., save uploaded file or process form data)
     if (!processPostData(request, path)) {
         response = buildErrorResponse(config, request, "500", "Internal Server Error");
-        return response;
+        std::cout << "in buid\n";
+		return response;
     }
+	std::cout << "before the end\n";
     // Build success response
     response = buildPostSuccessResponse(config, request, location);
+	std::cout << "works in the end\n";
     return response;
 }
 

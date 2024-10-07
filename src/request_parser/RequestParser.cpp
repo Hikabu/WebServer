@@ -18,6 +18,7 @@ HttpRequest RequestParser::parse(const std::string& request_str) {
     std::istringstream iss(request_str);
     std::string line;
 
+    std::cout << request_str << std::endl;
     // Parse request line
     if (!std::getline(iss, line)) {
         std::cerr << "Error: Could not read request line" << std::endl;
