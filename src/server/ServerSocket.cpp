@@ -27,18 +27,18 @@ ServerSocket::~ServerSocket(){}
 Clients	&ServerSocket::getClients() {return clientList; }
 Configs	&ServerSocket::get_possible_configs() {return possible_configs; }
 
-void	ServerSocket::start_listening()
+bool	ServerSocket::start_listening()
 {
 	int opt = 1;
 	int flags;
 	fd = socket(AF_INET, SOCK_STREAM, 0);
 	if (fd == -1)
-		throw(strerror(errno)) ;
+		return Utils::error();
 	flags = fcntl(fd, F_GETFL, 0);
 	if (flags == -1)
-		throw(strerror(errno)) ;
+		return Utils::error();
 	if (fcntl(fd, F_SETFL, flags | O_NONBLOCK) == -1)
-		throw(strerror(errno)) ;
+		return Utils::error();
 	setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
 	struct sockaddr_in address_ipv4;
 	memset(&address_ipv4, 0, sizeof(address_ipv4));
@@ -46,10 +46,11 @@ void	ServerSocket::start_listening()
 	address_ipv4.sin_addr.s_addr = htonl(host);
 	address_ipv4.sin_port = htons(port);;
 	if (bind(fd, (struct sockaddr *)&address_ipv4, sizeof(address_ipv4)) == -1)
-		throw(strerror(errno)) ;
+		return Utils::error();
 	if (listen(fd, 32) == -1)
-		throw(strerror(errno)) ;
+		return Utils::error();
 	multiplex->add(fd);
+	return (true);
 }
 
 void	ServerSocket::accept_new_client_connection()
